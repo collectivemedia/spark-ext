@@ -3,19 +3,19 @@ package org.apache.spark.ml.feature
 import org.apache.spark.ml.param.{Param, Params}
 
 /**
- * Trait for shared param categoryCol.
+ * Trait for shared param keyCol.
  */
-private[ml] trait HasCategoryCol extends Params {
+private[ml] trait HasKeyCol extends Params {
 
   /**
    * Param for category column name.
    * @group param
    */
-  final val categoryCol: Param[String] = new Param[String](this, "categoryCol",
+  final val keyCol: Param[String] = new Param[String](this, "keyCol",
     "Column that holds value for category name")
 
   /** @group getParam */
-  def getCategoryCol: String = $(categoryCol)
+  def getCategoryCol: String = $(keyCol)
 }
 
 /**

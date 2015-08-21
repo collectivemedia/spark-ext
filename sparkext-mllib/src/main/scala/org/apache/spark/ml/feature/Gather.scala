@@ -9,7 +9,7 @@ import org.apache.spark.sql.ext.functions._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
-private[feature] trait GatherParams extends Params with HasCategoryCol with HasValueCol with HasOutputCol {
+private[feature] trait GatherParams extends Params with HasKeyCol with HasValueCol with HasOutputCol {
 
   val primaryKeyCols: Param[Array[String]] = new StringArrayParam(this, "primaryKeyCols",
     "Primary key column names",
@@ -26,8 +26,8 @@ private[feature] trait GatherParams extends Params with HasCategoryCol with HasV
 
 /**
  * Inspired by R `tidyr` and `reshape2` packages. Convert long [[org.apache.spark.sql.DataFrame DataFrame]] with values
- * for each category into wide [[org.apache.spark.sql.DataFrame DataFrame]], applying aggregation function if single
- * category has multiple values
+ * for each key into wide [[org.apache.spark.sql.DataFrame DataFrame]], applying aggregation function if single
+ * key has multiple values
  * {{{
  * cookie_id | site_id | impressions
  * ----------|---------|--------------
@@ -50,7 +50,7 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
 
   def setPrimaryKeyCols(value: String*): this.type = set(primaryKeyCols, value.toArray)
 
-  def setCategoryCol(value: String): this.type = set(categoryCol, value)
+  def setKeyCol(value: String): this.type = set(keyCol, value)
 
   def setValueCol(value: String): this.type = set(valueCol, value)
 
@@ -67,7 +67,7 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
 
     val pkCols = $(primaryKeyCols).map(col)
 
-    val grouped = dataset.groupBy(pkCols :+ col($(categoryCol)) : _*)
+    val grouped = dataset.groupBy(pkCols :+ col($(keyCol)) : _*)
     val aggregateCol = s"${uid}_value_aggregate"
     val aggregated = $(valueAgg) match {
       case "sum" => grouped.agg(sum($(valueCol)) as aggregateCol)
@@ -79,7 +79,7 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
     aggregated
       .groupBy(pkCols: _*)
       .agg(collectArray(struct(
-          col($(categoryCol)),
+          col($(keyCol)),
           col(aggregateCol).cast(DoubleType).as($(valueCol))
       )).as($(outputCol), metadata))
   }
@@ -87,13 +87,13 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
   override def transformSchema(schema: StructType): StructType = {
     val valueFunName = $(valueAgg)
 
-    val categoryColName = $(categoryCol)
-    val categoryColDataType = schema(categoryColName).dataType
-    categoryColDataType match {
+    val keyColName = $(keyCol)
+    val keyColDataType = schema(keyColName).dataType
+    keyColDataType match {
       case _: NumericType =>
       case _: StringType =>
       case other =>
-        throw new IllegalArgumentException(s"Category column data type $other is not supported.")
+        throw new IllegalArgumentException(s"Key column data type $other is not supported.")
     }
 
     val valueColName = $(valueCol)
@@ -102,12 +102,12 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
       case _: NumericType =>
       case _: StringType if valueFunName == "count" =>
       case other =>
-        throw new IllegalArgumentException(s"Category value data type $other is not supported with value aggregate $valueAgg.")
+        throw new IllegalArgumentException(s"Value data type $other is not supported with value aggregate $valueAgg.")
     }
 
     val pkFields = $(primaryKeyCols).map(schema.apply)
     val rollupType = StructType(Array(
-      StructField($(categoryCol), categoryColDataType),
+      StructField($(keyCol), keyColDataType),
       StructField($(valueCol), DoubleType)
     ))
     val rollupField = StructField($(outputCol), ArrayType(rollupType), nullable = false)

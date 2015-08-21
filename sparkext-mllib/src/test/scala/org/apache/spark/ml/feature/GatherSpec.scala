@@ -32,7 +32,7 @@ class GatherSpec extends FlatSpec with GivenWhenThen with ShouldMatchers with Te
   "Gather Transformer" should "transform 'long' DataFrame into 'wide'" in {
     val gather = new Gather()
       .setPrimaryKeyCols("cookie_id")
-      .setCategoryCol("site")
+      .setKeyCol("site")
       .setValueCol("impressions")
       .setOutputCol("sites")
 

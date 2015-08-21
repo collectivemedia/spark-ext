@@ -6,7 +6,7 @@ import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.sql.types._
 import org.scalatest.FlatSpec
 
-class GatherEncoderSpec extends FlatSpec with TestSparkContext {
+class GatheredEncoderModelSpec extends FlatSpec with TestSparkContext {
 
   val schema = StructType(Seq(
     StructField("cookie_id", StringType),
@@ -38,7 +38,7 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
   val baseEncoder = new GatheredEncoderModel(Array("google.com", "bbc.com", "cnn.com"))
     .setInputCol("sites")
     .setOutputCol("features")
-    .setCategoryCol("site")
+    .setKeyCol("site")
     .setValueCol("impressions")
 
   def toFeatures(encoder: GatheredEncoderModel, dataset: DataFrame): Map[String, Vector] = {
@@ -48,7 +48,7 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
     }.toMap
   }
 
-  "Gather Encoder" should "encode categories ignoring all other" in {
+  "Gathered Encoder Model" should "encode categories ignoring all other" in {
     val encoder = baseEncoder.setAllOther(false)
     val features = toFeatures(encoder, dataset)
 

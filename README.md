@@ -85,8 +85,8 @@ contains approximately the same number of values from the sample.
 ## Gather
 
 Inspired by R `tidyr` and `reshape2` packages. Convert `long` `DataFrame` with values
-for each category into `wide` `DataFrame`, applying aggregation function if single
-category has multiple values
+for each key into `wide` `DataFrame`, applying aggregation function if single
+key has multiple values
 
 cookie_id | site_id | impressions
 ----------|---------|-------------
@@ -97,7 +97,7 @@ cookie_id | site_id | impressions
 ``` scala
 val gather = new Gather()
       .setPrimaryKeyCols("cookie_id")
-      .setCategoryCol("site_id")
+      .setKeyCol("site_id")
       .setValueCol("impressions")
       .setOutputCol("sites")
 val gathered = gather.transform(siteLog)      
@@ -106,3 +106,25 @@ val gathered = gather.transform(siteLog)
 cookie_id | sites
 ----------|-------------
 cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
+
+## Gathered Encoder
+
+Encode categorical key-value pairs using dummy variables. Optionally apply `top` dimensionality reduction.
+
+ cookie_id | sites
+ ----------|------------------------------------------------------------------------
+ cookieAA  | [{ site_id: 1, impressions: 15.0 }, { site_id: 2, impressions: 20.0 }]
+ cookieBB  | [{ site_id: 2, impressions: 7.0 }, { site_id: 3, impressions: 5.0 }]
+
+transformed into
+
+ cookie_id | site_features
+ ----------|------------------------
+ cookieAA  | [ 15.0 , 20.0 , 0   ]
+ cookieBB  | [ 0.0  ,  7.0 , 5.0 ]
+
+Optionally apply dimensionality reduction using top transformation:
+ - Top coverage, is selecting categorical values by computing the count of distinct users for each value,
+   sorting the values in descending order by the count of users, and choosing the top values from the resulting
+   list such that the sum of the distinct user counts over these values covers c percent of all users,
+   for example, selecting top geographic locations covering 99% of users.
