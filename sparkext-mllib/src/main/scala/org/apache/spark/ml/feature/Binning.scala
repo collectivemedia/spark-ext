@@ -84,9 +84,9 @@ class OptimalBinning(override val uid: String) extends Estimator[Binning] with B
 
 
 /**
- * Based on [[Bucketizer]], except that
- * instead of [[org.apache.spark.ml.attribute.NominalAttribute]] it
- * outputs [[AttributeGroup]] column
+ * Based on [[org.apache.spark.ml.feature.Bucketizer Bucketizer]], except that
+ * instead of [[org.apache.spark.ml.attribute.NominalAttribute NominalAttribute]] it
+ * outputs [[org.apache.spark.ml.attribute.AttributeGroup AttributeGroup]] column
  */
 final class Binning(override val uid: String)
   extends Model[Binning] with BinningBase {

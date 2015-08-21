@@ -35,8 +35,8 @@ private[feature] trait GatherParams extends Params with HasOutputCol {
 }
 
 /**
- * Inspired by R `tidyr` and `reshape2` packages. Convert long [[DataFrame]] with values
- * for each category into wide [[DataFrame]], applying aggregation function if single
+ * Inspired by R `tidyr` and `reshape2` packages. Convert long [[org.apache.spark.sql.DataFrame DataFrame]] with values
+ * for each category into wide [[org.apache.spark.sql.DataFrame DataFrame]], applying aggregation function if single
  * category has multiple values
  * {{{
  * cookie_id | site_id | impressions
