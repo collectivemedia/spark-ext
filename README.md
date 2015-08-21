@@ -72,8 +72,14 @@ cookie_id | site_id | impressions
  cookieAA |   123   | 5
  cookieAA |   456   | 20
  
-gathered using 'sum' aggregate
- 
-cookie_id | output_col
+``` scala
+val gathered = new Gather()
+      .setPrimaryKeyCols("cookie_id")
+      .setCategoryCol("site_id")
+      .setValueCol("impressions")
+      .setOutputCol("sites")
+```
+
+cookie_id | sites
 ----------|-------------
 cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
