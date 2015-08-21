@@ -66,17 +66,14 @@ Inspired by R 'tidyr' and 'reshape2' packages. Convert 'long' DataFrame with val
 for each category into 'wide' DataFrame, applying aggregation function if single
 category has multiple values
 
-|cookie_id | site_id | impressions
------------------------------------
-| cookieAA |   123   | 10
-| cookieAA |   123   | 5
-| cookieAA |   456   | 20
+cookie_id | site_id | impressions
+----------|---------|-------------
+ cookieAA |   123   | 10
+ cookieAA |   123   | 5
+ cookieAA |   456   | 20
  
 gathered using 'sum' aggregate
  
-|cookie_id | output_col
------------------------------------
-|cookieAA  | [
-|          |   { site_id: 123, impressions: 15.0 },
-|          |   { site_id: 456, impressions: 20.0 }
-|          | ]
+cookie_id | output_col
+----------|-------------
+cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
