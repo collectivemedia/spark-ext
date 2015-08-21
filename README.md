@@ -1,5 +1,7 @@
 # Spark Ext
 
+[![Build Status](https://travis-ci.org/collectivemedia/spark-ext.svg?branch=master)](https://travis-ci.org/collectivemedia/spark-ext)
+
 Spark ML transformers, estimator, Spark SQL aggregations, etc that are missing in Apache Spark
 
 ## Where to get it
@@ -11,8 +13,8 @@ resolvers += "Collective Media Bintray" at "https://dl.bintray.com/collectivemed
 And use following library dependencies:
 
 ```
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.1"
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.1"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.2"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.2"
 ```
 
 ## Testing
