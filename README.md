@@ -40,7 +40,7 @@ val impressionLog = sqlContext.createDataFrame(sc.parallelize(Seq(
 )), schema)
  ```
     
-### CollectArray
+#### CollectArray
 
 Aggregation function that collects all values from a column
 
@@ -55,7 +55,7 @@ impressionLog
 
 ## Spark ML
 
-## S2 Geometry CellId transformer
+#### S2 Geometry CellId transformer
 
 Gets Google S2 Geometry CellId from decimal `lat` and `lon`
 
@@ -76,13 +76,13 @@ val schema = StructType(Seq(
   s2CellTransformer.transform(cities)
 ```
 
-## Optimal Binning
+#### Optimal Binning
 
 Continuous features may need to be transformed to binary format using binning to account for nonlinearity. In general, 
 binning attempts to break a set of ordered values into evenly distributed groups, such that each group 
 contains approximately the same number of values from the sample.
 
-## Gather
+#### Gather
 
 Inspired by R `tidyr` and `reshape2` packages. Convert `long` `DataFrame` with values
 for each key into `wide` `DataFrame`, applying aggregation function if single
@@ -107,7 +107,7 @@ cookie_id | sites
 ----------|-------------
 cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
 
-## Gathered Encoder
+#### Gathered Encoder
 
 Encode categorical key-value pairs using dummy variables. Optionally apply `top` dimensionality reduction.
 
