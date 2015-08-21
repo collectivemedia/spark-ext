@@ -5,8 +5,6 @@ Spark ML transformers, estimator, Spark SQL aggregations, etc that are missing i
 ## Spark SQL
 
 ``` scala
-import org.apache.spark.sql.ext.functions._
-
 val schema = StructType(Seq(
   StructField("cookie_id", StringType),
   StructField("site", StringType),
@@ -25,7 +23,9 @@ val impressionLog = sqlContext.createDataFrame(sc.parallelize(Seq(
 Aggregation function that collects all values from a column
 
 ``` scala
-// Get all sites for cookie (with duplicates)
+import org.apache.spark.sql.ext.functions._
+
+// collects all sites for cookie (with duplicates)
 impressionLog
       .groupBy(col("cookie_id"))
       .agg(collectArray(col("site")))
