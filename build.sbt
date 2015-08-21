@@ -62,6 +62,25 @@ def SparkExtProject(path: String) =
     .settings(TestSettings.testSettings: _*)
     .settings(bintrayRepository := "releases")
     .settings(bintrayOrganization := Some("collectivemedia"))
+    .settings(
+      apiMappings ++= {
+        val cp: Seq[Attributed[File]] = (fullClasspath in Test).value
+        def findManagedDependency(organization: String, name: String): File = {
+          cp.foreach(println)
+          ( for {
+            entry <- cp
+            module <- entry.get(moduleID.key)
+            if module.organization == organization
+            if module.name.startsWith(name)
+            jarFile = entry.data
+          } yield jarFile
+            ).head
+        }
+        Map(
+          findManagedDependency("org.apache.spark", "spark") -> url("https://spark.apache.org/docs/latest/api/scala/")
+        )
+      }
+    )
 
 // Aggregate all projects & disable publishing root project
 
@@ -73,6 +92,7 @@ lazy val root = Project("spark-ext", file(".")).
   settings(site.settings ++ ghpages.settings: _*).
   settings(
     name := "spark-ext",
+    autoAPIMappings := true,
     site.addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), "/"),
     git.gitRemoteRepo := "git@github.com:collectivemedia/spark-ext.git"
   ).
@@ -88,6 +108,7 @@ lazy val sparkextMllib =
   SparkExtProject("sparkext-mllib")
     .dependsOn(sparkextSql)
     .dependsOn(sparkextTest % "test->test")
+
 
 lazy val sparkextTest =
   SparkExtProject("sparkext-test")

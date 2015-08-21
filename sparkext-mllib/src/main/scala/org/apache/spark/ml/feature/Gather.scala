@@ -9,26 +9,6 @@ import org.apache.spark.sql.ext.functions._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
-/**
- * Inspired by R 'tidyr' and 'reshape2' packages. Convert 'long' DataFrame with values
- * for each category into 'wide' DataFrame, applying aggregation function if single
- * category has multiple values
- *
- * cookie_id | site_id | impressions
- * -----------------------------------
- *  cookieAA |   123   | 10
- *  cookieAA |   123   | 5
- *  cookieAA |   456   | 20
- *
- *  ---------->>>>>>>> gather using 'sum' aggregate
- *
- *  cookie_id | output_col
- *  -----------------------------------
- *  cookieAA  | [
- *            |   { site_id: 123, impressions: 15.0 },
- *            |   { site_id: 456, impressions: 20.0 }
- *            | ]
- */
 private[feature] trait GatherParams extends Params with HasOutputCol {
 
   val primaryKeyCols: Param[Array[String]] = new StringArrayParam(this, "primaryKeyCols",
@@ -54,6 +34,26 @@ private[feature] trait GatherParams extends Params with HasOutputCol {
   def getValueAgg: String = $(valueAgg)
 }
 
+/**
+ * Inspired by R `tidyr` and `reshape2` packages. Convert long [[DataFrame]] with values
+ * for each category into wide [[DataFrame]], applying aggregation function if single
+ * category has multiple values
+ * {{{
+ * cookie_id | site_id | impressions
+ * ----------|---------|--------------
+ *  cookieAA |   123   | 10
+ *  cookieAA |   123   | 5
+ *  cookieAA |   456   | 20
+ * }}}
+ *
+ * gathered using `sum` agregate
+ *
+ * {{{
+ *  cookie_id | output_col
+ *  ----------|------------------------
+ *  cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
+ *  }}}
+ */
 class Gather(override val uid: String) extends Transformer with GatherParams {
 
   def this() = this(Identifiable.randomUID("gather"))
