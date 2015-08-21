@@ -39,13 +39,36 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"></div>
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
         <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
-        
-        
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.spark.ml.feature"><span>feature</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -70,9 +93,9 @@
         <a href="Binning.html"><span class="name">Binning</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>] with <span class="extype" name="org.apache.spark.ml.feature.BinningBase">BinningBase</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Based on <span class="extype" name="Bucketizer">Bucketizer</span>, except that
-instead of <span class="extype" name="org.apache.spark.ml.attribute.NominalAttribute">org.apache.spark.ml.attribute.NominalAttribute</span> it
-outputs <span class="extype" name="AttributeGroup">AttributeGroup</span> column
+      <p class="comment cmt">Based on <span class="extype" name="org.apache.spark.ml.feature.Bucketizer">Bucketizer</span>, except that
+instead of <span class="extype" name="org.apache.spark.ml.attribute.NominalAttribute">NominalAttribute</span> it
+outputs <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.attribute.AttributeGroup" class="extype" target="_top">AttributeGroup</a> column
 </p>
     </li><li name="org.apache.spark.ml.feature.Gather" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GatherextendsTransformerwithGatherParams"></a>
@@ -87,6 +110,35 @@ outputs <span class="extype" name="AttributeGroup">AttributeGroup</span> column
       </span>
       </h4>
       <p class="comment cmt">Inspired by R <code>tidyr</code> and <code>reshape2</code> packages.</p>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GatherEncoderextendsEstimator[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams"></a>
+      <a id="GatherEncoder:GatherEncoder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GatherEncoder.html"><span class="name">GatherEncoder</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="GatherEncoderModel.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>] with <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Encode categorical values collected by <a href="Gather.html" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> transformation as feature vector using
+dummy variables inside <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.attribute.AttributeGroup" class="extype" target="_top">AttributeGroup</a>
+with attached metadata</p>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GatherEncoderModelextendsModel[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams"></a>
+      <a id="GatherEncoderModel:GatherEncoderModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GatherEncoderModel.html"><span class="name">GatherEncoderModel</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="GatherEncoderModel.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>] with <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Model fitted by <a href="GatherEncoder.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoder">GatherEncoder</a>
+</p>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="OptimalBinningextendsEstimator[org.apache.spark.ml.feature.Binning]withBinningBasewithSplitOptimizer"></a>
       <a id="OptimalBinning:OptimalBinning"></a>
@@ -123,7 +175,7 @@ outputs <span class="extype" name="AttributeGroup">AttributeGroup</span> column
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="SplitOptimizer.html"><span class="name">SplitOptimizer</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <a href="SplitOptimizer.html"><span class="name">SplitOptimizer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">Compute optimal split to have the same number of points in each bucket/bin
@@ -141,7 +193,11 @@ outputs <span class="extype" name="AttributeGroup">AttributeGroup</span> column
         </div>
 
         <div id="inheritedMembers">
-        
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
         </div>
 

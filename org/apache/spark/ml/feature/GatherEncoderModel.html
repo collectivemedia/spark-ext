@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Gather - org.apache.spark.ml.feature.Gather</title>
-          <meta name="description" content="Gather - org.apache.spark.ml.feature.Gather" />
-          <meta name="keywords" content="Gather org.apache.spark.ml.feature.Gather" />
+          <title>GatherEncoderModel - org.apache.spark.ml.feature.GatherEncoderModel</title>
+          <meta name="description" content="GatherEncoderModel - org.apache.spark.ml.feature.GatherEncoderModel" />
+          <meta name="keywords" content="GatherEncoderModel org.apache.spark.ml.feature.GatherEncoderModel" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
-            var hash = 'org.apache.spark.ml.feature.Gather';
+            var hash = 'org.apache.spark.ml.feature.GatherEncoderModel';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,7 +26,7 @@
       <div id="definition">
         <img src="../../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.feature">feature</a></p>
-        <h1>Gather</h1>
+        <h1>GatherEncoderModel</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,21 +35,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Gather</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a> with <span class="extype" name="org.apache.spark.ml.feature.GatherParams">GatherParams</span></span>
+        <span class="name">GatherEncoderModel</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>] with <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inspired by R <code>tidyr</code> and <code>reshape2</code> packages. Convert long <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a> with values
-for each key into wide <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a>, applying aggregation function if single
-key has multiple values</p><pre>cookie_id | site_id | impressions
-----------|---------|--------------
- cookieAA |   <span class="num">123</span>   | <span class="num">10</span>
- cookieAA |   <span class="num">123</span>   | <span class="num">5</span>
- cookieAA |   <span class="num">456</span>   | <span class="num">20</span></pre><p>gathered using <code>sum</code> agregate</p><pre>cookie_id | output_col
-----------|------------------------
-cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="num">15.0</span> }, { site_id: <span class="num">456</span>, impressions: <span class="num">20.0</span> }]</pre></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Model fitted by <a href="GatherEncoder.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoder">GatherEncoder</a>
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.ml.feature.GatherParams">GatherParams</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <span class="extype" name="org.apache.spark.ml.feature.HasValueCol">HasValueCol</span>, <span class="extype" name="org.apache.spark.ml.feature.HasKeyCol">HasKeyCol</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span>, <span class="extype" name="org.apache.spark.ml.feature.HasValueCol">HasValueCol</span>, <span class="extype" name="org.apache.spark.ml.feature.HasKeyCol">HasKeyCol</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -67,7 +60,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="org.apache.spark.ml.feature.Gather"><span>Gather</span></li><li class="in" name="org.apache.spark.ml.feature.GatherParams"><span>GatherParams</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasOutputCol"><span>HasOutputCol</span></li><li class="in" name="org.apache.spark.ml.feature.HasValueCol"><span>HasValueCol</span></li><li class="in" name="org.apache.spark.ml.feature.HasKeyCol"><span>HasKeyCol</span></li><li class="in" name="org.apache.spark.ml.Transformer"><span>Transformer</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="org.apache.spark.ml.feature.GatherEncoderModel"><span>GatherEncoderModel</span></li><li class="in" name="org.apache.spark.ml.feature.GatherEncoderParams"><span>GatherEncoderParams</span></li><li class="in" name="org.apache.spark.ml.feature.HasValueCol"><span>HasValueCol</span></li><li class="in" name="org.apache.spark.ml.feature.HasKeyCol"><span>HasKeyCol</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasOutputCol"><span>HasOutputCol</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasInputCol"><span>HasInputCol</span></li><li class="in" name="org.apache.spark.ml.Model"><span>Model</span></li><li class="in" name="org.apache.spark.ml.Transformer"><span>Transformer</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -87,32 +80,33 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.apache.spark.ml.feature.Gather#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():org.apache.spark.ml.feature.Gather"></a>
-      <a id="&lt;init&gt;:Gather"></a>
+              <ol><li name="org.apache.spark.ml.feature.GatherEncoderModel#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(keys:Array[Any]):org.apache.spark.ml.feature.GatherEncoderModel"></a>
+      <a id="&lt;init&gt;:GatherEncoderModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Gather</span><span class="params">()</span>
+        <span class="name">GatherEncoderModel</span><span class="params">(<span name="keys">keys: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.Gather#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.feature.Gather"></a>
-      <a id="&lt;init&gt;:Gather"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(uid:String,keys:Array[Any]):org.apache.spark.ml.feature.GatherEncoderModel"></a>
+      <a id="&lt;init&gt;:GatherEncoderModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Gather</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">GatherEncoderModel</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="keys">keys: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">keys</dt><dd class="cmt"><p>Ordered list of keys, corresponding column indices in feature vector
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -200,6 +194,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderParams#allOther" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="allOther:org.apache.spark.ml.param.Param[Boolean]"></a>
+      <a id="allOther:Param[Boolean]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">allOther</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherEncoderParams</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -215,14 +222,14 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#clear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type"></a>
-      <a id="clear(Param[_]):Gather.this.type"></a>
+      <a id="clear(Param[_]):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
@@ -245,19 +252,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.Gather#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="copy(ParamMap):S2CellTransformer"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.GatherEncoderModel"></a>
+      <a id="copy(ParamMap):GatherEncoderModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="S2CellTransformer.html" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a></span>
+        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> → Transformer → PipelineStage → Params</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a> → Model → Transformer → PipelineStage → Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#copyValues" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T"></a>
       <a id="copyValues[T&lt;:Params](T,ParamMap):T"></a>
@@ -271,6 +278,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderParams#cover" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cover:org.apache.spark.ml.param.Param[Double]"></a>
+      <a id="cover:Param[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cover</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherEncoderParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#defaultCopy" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T"></a>
       <a id="defaultCopy[T&lt;:Params](ParamMap):T"></a>
@@ -394,6 +414,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderParams#getAllOther" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAllOther:Boolean"></a>
+      <a id="getAllOther:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAllOther</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherEncoderParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.HasKeyCol#getCategoryCol" visbl="pub" data-isabs="false" fullComment="yes" group="getParam">
       <a id="getCategoryCol:String"></a>
       <a id="getCategoryCol:String"></a>
@@ -420,6 +453,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderParams#getCover" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCover:Double"></a>
+      <a id="getCover:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCover</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherEncoderParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
       <a id="getDefault[T](Param[T]):Option[T]"></a>
@@ -433,6 +479,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasInputCol#getInputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInputCol:String"></a>
+      <a id="getInputCol:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getOrDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
       <a id="getOrDefault[T](Param[T]):T"></a>
@@ -472,32 +531,6 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.GatherParams#getPrimaryKeyCols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPrimaryKeyCols:Array[String]"></a>
-      <a id="getPrimaryKeyCols:Array[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPrimaryKeyCols</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherParams</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.GatherParams#getValueAgg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValueAgg:String"></a>
-      <a id="getValueAgg:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getValueAgg</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.HasValueCol#getValueCol" visbl="pub" data-isabs="false" fullComment="yes" group="getParam">
       <a id="getValueCol:String"></a>
       <a id="getValueCol:String"></a>
@@ -537,6 +570,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Model#hasParent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasParent:Boolean"></a>
+      <a id="hasParent:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasParent</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -550,6 +596,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasInputCol#inputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputCol:org.apache.spark.ml.param.Param[String]"></a>
+      <a id="inputCol:Param[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isDefined" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
       <a id="isDefined(Param[_]):Boolean"></a>
@@ -615,6 +674,20 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <p class="shortcomment cmt">Param for category column name.</p><div class="fullcomment"><div class="comment cmt"><p>Param for category column name.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasKeyCol</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#keys" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="keys:Array[Any]"></a>
+      <a id="keys:Array[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keys</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Ordered list of keys, corresponding column indices in feature vector
+</p>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
       <a id="log:Logger"></a>
@@ -836,146 +909,172 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.GatherParams#primaryKeyCols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="primaryKeyCols:org.apache.spark.ml.param.Param[Array[String]]"></a>
-      <a id="primaryKeyCols:Param[Array[String]]"></a>
+    </li><li name="org.apache.spark.ml.Model#parent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parent:org.apache.spark.ml.Estimator[M]"></a>
+      <a id="parent:Estimator[GatherEncoderModel]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">primaryKeyCols</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">parent</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherParams</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type"></a>
-      <a id="set(ParamPair[_]):Gather.this.type"></a>
+      <a id="set(ParamPair[_]):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(param:String,value:Any):Params.this.type"></a>
-      <a id="set(String,Any):Gather.this.type"></a>
+      <a id="set(String,Any):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="set[T](Param[T],T):Gather.this.type"></a>
+      <a id="set[T](Param[T],T):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setAllOther" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setAllOther(value:Boolean):GatherEncoderModel.this.type"></a>
+      <a id="setAllOther(Boolean):GatherEncoderModel.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAllOther</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setCover" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setCover(value:Double):GatherEncoderModel.this.type"></a>
+      <a id="setCover(Double):GatherEncoderModel.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCover</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
+      </span>
+      </h4>
+      
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type"></a>
-      <a id="setDefault(ParamPair[_]*):Gather.this.type"></a>
+      <a id="setDefault(ParamPair[_]*):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="setDefault[T](Param[T],T):Gather.this.type"></a>
+      <a id="setDefault[T](Param[T],T):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.Gather#setKeyCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setKeyCol(value:String):Gather.this.type"></a>
-      <a id="setKeyCol(String):Gather.this.type"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setInputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setInputCol(value:String):GatherEncoderModel.this.type"></a>
+      <a id="setInputCol(String):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setKeyCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setInputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.Gather#setOutputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setOutputCol(value:String):Gather.this.type"></a>
-      <a id="setOutputCol(String):Gather.this.type"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setKeyCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setKeyCol(value:String):GatherEncoderModel.this.type"></a>
+      <a id="setKeyCol(String):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setOutputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setKeyCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.Gather#setPrimaryKeyCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setPrimaryKeyCols(value:String*):Gather.this.type"></a>
-      <a id="setPrimaryKeyCols(String*):Gather.this.type"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setOutputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setOutputCol(value:String):GatherEncoderModel.this.type"></a>
+      <a id="setOutputCol(String):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPrimaryKeyCols</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setOutputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.Gather#setValueAgg" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setValueAgg(value:String):Gather.this.type"></a>
-      <a id="setValueAgg(String):Gather.this.type"></a>
+    </li><li name="org.apache.spark.ml.Model#setParent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setParent(parent:org.apache.spark.ml.Estimator[M]):M"></a>
+      <a id="setParent(Estimator[GatherEncoderModel]):GatherEncoderModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setValueAgg</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setParent</span><span class="params">(<span name="parent">parent: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a></span>
       </span>
       </h4>
-      
-    </li><li name="org.apache.spark.ml.feature.Gather#setValueCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setValueCol(value:String):Gather.this.type"></a>
-      <a id="setValueCol(String):Gather.this.type"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#setValueCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setValueCol(value:String):GatherEncoderModel.this.type"></a>
+      <a id="setValueCol(String):GatherEncoderModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setValueCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a>.this.type</span>
+        <span class="name">setValueCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>.this.type</span>
       </span>
       </h4>
       
@@ -1005,7 +1104,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Identifiable → AnyRef → Any</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.Gather#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.sql.DataFrame"></a>
       <a id="transform(DataFrame):DataFrame"></a>
       <h4 class="signature">
@@ -1017,7 +1116,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
         <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> → Transformer</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a> → Transformer</dd></dl></div>
     </li><li name="org.apache.spark.ml.Transformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):org.apache.spark.sql.DataFrame"></a>
       <a id="transform(DataFrame,ParamMap):DataFrame"></a>
@@ -1047,7 +1146,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
                 <span class="name">@varargs</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.Gather#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType):StructType"></a>
       <h4 class="signature">
@@ -1059,7 +1158,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> → PipelineStage</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a> → PipelineStage</dd></dl></div>
     </li><li name="org.apache.spark.ml.PipelineStage#transformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType,Boolean):StructType"></a>
@@ -1076,7 +1175,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
                 <span class="name">@DeveloperApi</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.Gather#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderModel#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="uid:String"></a>
       <a id="uid:String"></a>
       <h4 class="signature">
@@ -1088,7 +1187,7 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> → Identifiable</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a> → Identifiable</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#validateParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateParams():Unit"></a>
       <a id="validateParams():Unit"></a>
@@ -1102,19 +1201,19 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.GatherParams#valueAgg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="valueAgg:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="valueAgg:Param[String]"></a>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoderParams#validateSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="validateSchema(schema:org.apache.spark.sql.types.StructType):Unit"></a>
+      <a id="validateSchema(StructType):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">valueAgg</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">validateSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GatherParams</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>GatherEncoderParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.HasValueCol#valueCol" visbl="pub" data-isabs="false" fullComment="yes" group="param">
       <a id="valueCol:org.apache.spark.ml.param.Param[String]"></a>
       <a id="valueCol:Param[String]"></a>
@@ -1194,14 +1293,18 @@ cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.apache.spark.ml.feature.GatherParams">
-              <h3>Inherited from <span class="extype" name="org.apache.spark.ml.feature.GatherParams">GatherParams</span></h3>
-            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasOutputCol">
-              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a></h3>
+        <div class="parent" name="org.apache.spark.ml.feature.GatherEncoderParams">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></h3>
             </div><div class="parent" name="org.apache.spark.ml.feature.HasValueCol">
               <h3>Inherited from <span class="extype" name="org.apache.spark.ml.feature.HasValueCol">HasValueCol</span></h3>
             </div><div class="parent" name="org.apache.spark.ml.feature.HasKeyCol">
               <h3>Inherited from <span class="extype" name="org.apache.spark.ml.feature.HasKeyCol">HasKeyCol</span></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasOutputCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasInputCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.Model">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>]</h3>
             </div><div class="parent" name="org.apache.spark.ml.Transformer">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></h3>
             </div><div class="parent" name="org.apache.spark.ml.PipelineStage">
