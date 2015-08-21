@@ -1,3 +1,5 @@
+import com.typesafe.sbt.SbtGit.{GitKeys => git}
+
 name in ThisBuild := "spark-ext"
 
 organization in ThisBuild := "com.collective"
@@ -67,6 +69,13 @@ lazy val root = Project("spark-ext", file(".")).
   settings(publish :=()).
   settings(publishLocal :=()).
   settings(unidocSettings: _*).
+  settings(unidocSettings: _*).
+  settings(site.settings ++ ghpages.settings: _*).
+  settings(
+    name := "spark-ext",
+    site.addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), "/"),
+    git.gitRemoteRepo := "git@github.com:collectivemedia/spark-ext.git"
+  ).
   aggregate(sparkextSql, sparkextMllib, sparkextTest)
 
 // Spark Ext Projects
