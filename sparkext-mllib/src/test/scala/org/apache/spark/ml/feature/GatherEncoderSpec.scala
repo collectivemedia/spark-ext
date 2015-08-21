@@ -5,7 +5,7 @@ import org.apache.spark.sql.Row
 import org.apache.spark.sql.types._
 import org.scalatest.FlatSpec
 
-class GatheredEncoderSpec extends FlatSpec with TestSparkContext {
+class GatherEncoderSpec extends FlatSpec with TestSparkContext {
 
   val schema = StructType(Seq(
     StructField("cookie_id", StringType),
@@ -43,13 +43,13 @@ class GatheredEncoderSpec extends FlatSpec with TestSparkContext {
     )))
   ), schema)
 
-  val baseEncoder = new GatheredEncoder()
+  val baseEncoder = new GatherEncoder()
     .setInputCol("sites")
     .setOutputCol("features")
     .setKeyCol("site")
     .setValueCol("impressions")
 
-  "Gathered Encoder" should "collect all keys when cover is 100.0" in {
+  "Gather Encoder" should "collect all keys when cover is 100.0" in {
     val encoder = baseEncoder.setCover(100.0)
     val features = encoder.fit(dataset)
     assert(features.keys.length == 9)

@@ -16,7 +16,7 @@ import org.apache.spark.sql.types._
 import scala.collection.mutable
 
 
-private[feature] trait GatheredEncoderParams
+private[feature] trait GatherEncoderParams
   extends Params with HasInputCol with HasOutputCol with HasKeyCol with HasValueCol {
 
   val cover: Param[Double] = new Param[Double](this, "cover",
@@ -89,7 +89,7 @@ private[feature] trait GatheredEncoderParams
  *    list such that the sum of the distinct user counts over these values covers c percent of all users,
  *    for example, selecting top geographic locations covering 99% of users.
  */
-class GatheredEncoder(override val uid: String) extends Estimator[GatheredEncoderModel] with GatheredEncoderParams {
+class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderModel] with GatherEncoderParams {
 
   def this() = this(Identifiable.randomUID("gatheredEncoder"))
 
@@ -110,7 +110,7 @@ class GatheredEncoder(override val uid: String) extends Estimator[GatheredEncode
     allOther -> true
   )
 
-  override def fit(dataset: DataFrame): GatheredEncoderModel = {
+  override def fit(dataset: DataFrame): GatherEncoderModel = {
     validateSchema(dataset.schema)
 
     val inputColName = $(inputCol)
@@ -123,7 +123,7 @@ class GatheredEncoder(override val uid: String) extends Estimator[GatheredEncode
       s"Cover: ${$(cover)}. " +
       s"All other: ${$(allOther)}.")
 
-    val gatheredKeys: Array[Any] = if ($(cover) == 100.0) {
+    val gatherKeys: Array[Any] = if ($(cover) == 100.0) {
       // With cover 100% it's required to collect all keys
       val keyCol = s"${uid}_key"
       dataset.select(explode(col(s"$inputColName.$keyColName")) as keyCol)
@@ -149,7 +149,7 @@ class GatheredEncoder(override val uid: String) extends Estimator[GatheredEncode
       topKeys.take(keysBelowThreshold).map(_._1)
     }
 
-    copyValues(new GatheredEncoderModel(uid, gatheredKeys).setParent(this))
+    copyValues(new GatherEncoderModel(uid, gatherKeys).setParent(this))
   }
 
   override def transformSchema(schema: StructType): StructType = {
@@ -158,19 +158,19 @@ class GatheredEncoder(override val uid: String) extends Estimator[GatheredEncode
     SchemaUtils.appendColumn(schema, StructField($(outputCol), new VectorUDT))
   }
 
-  override def copy(extra: ParamMap): GatheredEncoder = defaultCopy(extra)
+  override def copy(extra: ParamMap): GatherEncoder = defaultCopy(extra)
 
 }
 
 /**
- * Model fitted by [[GatheredEncoder]]
+ * Model fitted by [[GatherEncoder]]
  *
  * @param keys  Ordered list of keys, corresponding column indices in feature vector
  */
-class GatheredEncoderModel(
+class GatherEncoderModel(
   override val uid: String,
   val keys: Array[Any]
-) extends Model[GatheredEncoderModel] with GatheredEncoderParams {
+) extends Model[GatherEncoderModel] with GatherEncoderParams {
 
   def this(keys: Array[Any]) = this(Identifiable.randomUID("gatheredEncoder"), keys)
 
@@ -245,8 +245,8 @@ class GatheredEncoderModel(
     SchemaUtils.appendColumn(schema, attrGroup.toStructField())
   }
 
-  override def copy(extra: ParamMap): GatheredEncoderModel = {
-    defaultCopy[GatheredEncoderModel](extra).setParent(parent)
+  override def copy(extra: ParamMap): GatherEncoderModel = {
+    defaultCopy[GatherEncoderModel](extra).setParent(parent)
   }
 
 }

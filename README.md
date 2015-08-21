@@ -104,7 +104,7 @@ cookie_id | sites
 ----------|-------------
 cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 20.0 }]
 
-#### Gathered Encoder
+#### Gather Encoder
 
 Encode categorical key-value pairs using dummy variables. Optionally apply `top` dimensionality reduction.
 

@@ -6,7 +6,7 @@ import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.sql.types._
 import org.scalatest.FlatSpec
 
-class GatheredEncoderModelSpec extends FlatSpec with TestSparkContext {
+class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
 
   val schema = StructType(Seq(
     StructField("cookie_id", StringType),
@@ -35,20 +35,20 @@ class GatheredEncoderModelSpec extends FlatSpec with TestSparkContext {
     ))
   )), schema)
 
-  val baseEncoder = new GatheredEncoderModel(Array("google.com", "bbc.com", "cnn.com"))
+  val baseEncoder = new GatherEncoderModel(Array("google.com", "bbc.com", "cnn.com"))
     .setInputCol("sites")
     .setOutputCol("features")
     .setKeyCol("site")
     .setValueCol("impressions")
 
-  def toFeatures(encoder: GatheredEncoderModel, dataset: DataFrame): Map[String, Vector] = {
+  def toFeatures(encoder: GatherEncoderModel, dataset: DataFrame): Map[String, Vector] = {
     val encodedDf = encoder.transform(dataset).select("cookie_id", "features")
     encodedDf.collect().map { case Row(cookieId: String, features: Vector) =>
       cookieId -> features
     }.toMap
   }
 
-  "Gathered Encoder Model" should "encode categories ignoring all other" in {
+  "Gather Encoder Model" should "encode categories ignoring all other" in {
     val encoder = baseEncoder.setAllOther(false)
     val features = toFeatures(encoder, dataset)
 
