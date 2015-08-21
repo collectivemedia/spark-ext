@@ -9,27 +9,17 @@ import org.apache.spark.sql.ext.functions._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
-private[feature] trait GatherParams extends Params with HasOutputCol {
+private[feature] trait GatherParams extends Params with HasCategoryCol with HasValueCol with HasOutputCol {
 
   val primaryKeyCols: Param[Array[String]] = new StringArrayParam(this, "primaryKeyCols",
     "Primary key column names",
     ParamValidators.arrayLengthGt(0))
-
-  val categoryCol: Param[String] = new Param[String](this, "categoryCol",
-    "Column that holds value for category name")
-
-  val valueCol: Param[String] = new Param[String](this, "valueCol",
-    "Column that holds a value for category")
 
   val valueAgg: Param[String] = new Param[String](this, "valueAgg",
     "Aggregate function applied to valueCol: 'sum' or 'count'",
     ParamValidators.inArray(Array("sum", "count")))
 
   def getPrimaryKeyCols: Array[String] = $(primaryKeyCols)
-
-  def getCategoryCol: String = $(categoryCol)
-
-  def getValueCol: String = $(valueCol)
 
   def getValueAgg: String = $(valueAgg)
 }

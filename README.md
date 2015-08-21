@@ -2,6 +2,28 @@
 
 Spark ML transformers, estimator, Spark SQL aggregations, etc that are missing in Apache Spark
 
+## Where to get it
+
+Model Matrix workflow focused around [command line interface](http://collectivemedia.github.io/modelmatrix/doc/cli.html), 
+however you can use client library to apply model matrix transformations to DataFrame in your application.
+
+To get the latest version of the model matrix, add the following to your SBT build:
+
+``` scala
+resolvers += "Collective Media Bintray" at "https://dl.bintray.com/collectivemedia/releases"
+```
+
+And use following library dependencies:
+
+```
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.1"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.1"
+```
+
+## Testing
+
+    sbt test
+    
 ## Spark SQL
 
 ``` scala

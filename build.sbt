@@ -2,7 +2,7 @@ import com.typesafe.sbt.SbtGit.{GitKeys => git}
 
 name in ThisBuild := "spark-ext"
 
-organization in ThisBuild := "com.collective"
+organization in ThisBuild := "com.collective.sparkext"
 
 scalaVersion in ThisBuild := "2.10.5"
 
@@ -74,7 +74,7 @@ def SparkExtProject(path: String) =
             if module.name.startsWith(name)
             jarFile = entry.data
           } yield jarFile
-            ).head
+          ).head
         }
         Map(
           findManagedDependency("org.apache.spark", "spark") -> url("https://spark.apache.org/docs/latest/api/scala/")
@@ -91,7 +91,6 @@ lazy val root = Project("spark-ext", file(".")).
   settings(unidocSettings: _*).
   settings(site.settings ++ ghpages.settings: _*).
   settings(
-    name := "spark-ext",
     autoAPIMappings := true,
     site.addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), "/"),
     git.gitRemoteRepo := "git@github.com:collectivemedia/spark-ext.git"
