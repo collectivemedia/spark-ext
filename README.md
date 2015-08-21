@@ -54,3 +54,29 @@ val schema = StructType(Seq(
   s2CellTransformer.transform(cities)
 ```
 
+## Optimal Binning
+
+Continuous features may need to be transformed to binary format using binning to account for nonlinearity. In general, 
+binning attempts to break a set of ordered values into evenly distributed groups, such that each group 
+contains approximately the same number of values from the sample.
+
+## Gather
+
+Inspired by R 'tidyr' and 'reshape2' packages. Convert 'long' DataFrame with values
+for each category into 'wide' DataFrame, applying aggregation function if single
+category has multiple values
+
+|cookie_id | site_id | impressions
+-----------------------------------
+| cookieAA |   123   | 10
+| cookieAA |   123   | 5
+| cookieAA |   456   | 20
+ 
+gathered using 'sum' aggregate
+ 
+|cookie_id | output_col
+-----------------------------------
+|cookieAA  | [
+|          |   { site_id: 123, impressions: 15.0 },
+|          |   { site_id: 456, impressions: 20.0 }
+|          | ]
