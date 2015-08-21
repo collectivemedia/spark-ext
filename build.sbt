@@ -46,7 +46,9 @@ resolvers in ThisBuild ++= Seq(
   "Apache Releases"      at "http://repository.apache.org/content/repositories/releases/",
   "Apache Snapshots"     at "http://repository.apache.org/content/repositories/snapshots",
   // Conjars
-  "Conjars"              at "http://conjars.org/repo"
+  "Conjars"              at "http://conjars.org/repo",
+  // Collective
+  "Collective Bintray"   at "https://dl.bintray.com/collectivemedia/releases"
 )
 
 

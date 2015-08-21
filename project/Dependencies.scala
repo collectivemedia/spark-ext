@@ -12,6 +12,7 @@ object Dependencies {
   val sparkExtMllib =
     Seq(
         sparkMLLib
+      , s2Geometry
       , Test.scalaTest
     )
 
