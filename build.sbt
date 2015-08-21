@@ -43,10 +43,11 @@ resolvers in ThisBuild ++= Seq(
   Resolver.sonatypeRepo("releases"),
   Resolver.sonatypeRepo("snapshots"),
   // Scalaz
-  "Scalaz Bintray Repo"  at "http://dl.bintray.com/scalaz/releases",
+  "Scalaz Bintray Repo"  at "https://dl.bintray.com/scalaz/releases",
   // Apache
-  "Apache Releases"      at "http://repository.apache.org/content/repositories/releases/",
-  "Apache Snapshots"     at "http://repository.apache.org/content/repositories/snapshots",
+  "Apache Releases"      at "https://repository.apache.org/content/repositories/releases/",
+  "Apache Staging"       at "https://repository.apache.org/content/repositories/staging",
+  "Apache Snapshots"     at "https://repository.apache.org/content/repositories/snapshots",
   // Conjars
   "Conjars"              at "http://conjars.org/repo",
   // Collective
