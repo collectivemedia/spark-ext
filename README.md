@@ -73,11 +73,12 @@ cookie_id | site_id | impressions
  cookieAA |   456   | 20
  
 ``` scala
-val gathered = new Gather()
+val gather = new Gather()
       .setPrimaryKeyCols("cookie_id")
       .setCategoryCol("site_id")
       .setValueCol("impressions")
       .setOutputCol("sites")
+val gathered = gather.transform(siteLog)      
 ```
 
 cookie_id | sites
