@@ -106,7 +106,7 @@ cookieAA  | [{ site_id: 123, impressions: 15.0 }, { site_id: 456, impressions: 2
 
 #### Gather Encoder
 
-Encode categorical key-value pairs using dummy variables. Optionally apply `top` dimensionality reduction.
+Encode categorical key-value pairs using dummy variables. 
 
  cookie_id | sites
  ----------|------------------------------------------------------------------------
@@ -120,8 +120,8 @@ transformed into
  cookieAA  | [ 15.0 , 20.0 , 0   ]
  cookieBB  | [ 0.0  ,  7.0 , 5.0 ]
 
-Optionally apply dimensionality reduction using top transformation:
+Optionally apply dimensionality reduction using `top` transformation:
  - Top coverage, is selecting categorical values by computing the count of distinct users for each value,
    sorting the values in descending order by the count of users, and choosing the top values from the resulting
    list such that the sum of the distinct user counts over these values covers c percent of all users,
-   for example, selecting top geographic locations covering 99% of users.
+   for example, selecting top sites covering 99% of users.
