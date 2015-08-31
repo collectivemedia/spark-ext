@@ -171,8 +171,6 @@ class GatherEncoderModel(
   val keys: Array[Any]
 ) extends Model[GatherEncoderModel] with GatherEncoderParams {
 
-  def this(uid: String) = this(uid, Array.empty)
-
   def this(keys: Array[Any]) = this(Identifiable.randomUID("gatheredEncoder"), keys)
 
   def setInputCol(value: String): this.type = set(inputCol, value)
