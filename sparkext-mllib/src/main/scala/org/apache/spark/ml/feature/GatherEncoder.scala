@@ -36,6 +36,8 @@ private[feature] trait GatherEncoderParams
     val inputColDataType = schema(inputColName).dataType
     val inputColStructSchema = inputColDataType match {
       case ArrayType(structType: StructType, false) => structType
+      case ArrayType(structType: StructType, true) =>
+        throw new IllegalArgumentException(s"Input column data type doesn't support ArrayType with 'containsNull=true'")
       case other =>
         throw new IllegalArgumentException(s"Input column data type $other is not supported.")
     }
