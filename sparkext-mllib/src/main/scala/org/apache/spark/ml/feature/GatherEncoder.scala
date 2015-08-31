@@ -1,15 +1,12 @@
 package org.apache.spark.ml.feature
 
-import org.apache.spark.SparkException
-import org.apache.spark.annotation.DeveloperApi
+import org.apache.spark.ml.attribute.{Attribute, AttributeGroup, NumericAttribute}
+import org.apache.spark.ml.param.shared.{HasInputCol, HasOutputCol}
+import org.apache.spark.ml.param.{Param, ParamMap, ParamValidators, Params}
+import org.apache.spark.ml.util.{Identifiable, SchemaUtils}
 import org.apache.spark.ml.{Estimator, Model}
-import org.apache.spark.ml.attribute.{NominalAttribute, AttributeGroup, NumericAttribute, Attribute}
-import org.apache.spark.ml.param.{ParamMap, ParamValidators, Param, Params}
-import org.apache.spark.ml.param.shared.{HasOutputCol, HasInputCol}
-import org.apache.spark.ml.util.{SchemaUtils, Identifiable}
 import org.apache.spark.mllib.linalg.{VectorUDT, Vectors}
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.catalyst.expressions.CollectHashSet
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
@@ -174,6 +171,8 @@ class GatherEncoderModel(
   val keys: Array[Any]
 ) extends Model[GatherEncoderModel] with GatherEncoderParams {
 
+  def this(uid: String) = this(uid, Array.empty)
+
   def this(keys: Array[Any]) = this(Identifiable.randomUID("gatheredEncoder"), keys)
 
   def setInputCol(value: String): this.type = set(inputCol, value)
@@ -248,7 +247,8 @@ class GatherEncoderModel(
   }
 
   override def copy(extra: ParamMap): GatherEncoderModel = {
-    defaultCopy[GatherEncoderModel](extra).setParent(parent)
+    val copied = new GatherEncoderModel(uid, keys)
+    copyValues(copied, extra).setParent(parent)
   }
 
 }
