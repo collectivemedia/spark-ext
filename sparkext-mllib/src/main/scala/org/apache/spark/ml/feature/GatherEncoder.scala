@@ -190,7 +190,9 @@ class GatherEncoderModel(
     allOther -> true
   )
 
-  private def labels = keys.map(_.toString)
+  private val labels: Array[String] = keys.map(_.toString)
+
+  private val keyIndex: Map[Any, Int] = keys.zipWithIndex.toMap
 
   override def transform(dataset: DataFrame): DataFrame = {
     val outputSchema = transformSchema(dataset.schema)
@@ -198,6 +200,8 @@ class GatherEncoderModel(
     val inputColName = $(inputCol)
     val keyColName = $(keyCol)
     val valueColName = $(valueCol)
+
+    val allOtherEnabled = $(allOther)
 
     val encoder = udf { (names: mutable.WrappedArray[AnyRef], values: mutable.WrappedArray[Double]) =>
       require(names.length == values.length,
@@ -208,20 +212,24 @@ class GatherEncoderModel(
       while (i < names.length) {
         val name = names(i)
         val value = values(i)
-        val idx = keys.indexOf(name)
 
-        // Take latest value for key and accumulate for all other
-        if (idx >= 0) {
-          elements(idx) = value
-        } else if ($(allOther)) {
-          val allOther = elements.getOrElse(keys.length, 0.0)
-          elements.update(keys.length, allOther + value)
+        keyIndex.get(name) match {
+          // Take latest value for key
+          case Some(idx) =>
+            elements(idx) = value
+          // Accumulate values is all other enabled
+          case None if allOtherEnabled =>
+            val allOther = elements.getOrElse(keys.length, 0.0)
+            elements.update(keys.length, allOther + value)
+          // Ignore key if all other is disables
+          case None =>
         }
+
         i += 1
       }
 
-      val size = if ($(allOther)) keys.length + 1 else keys.length
-      Vectors.sparse(size, elements.toArray)
+      val size = if (allOtherEnabled) keys.length + 1 else keys.length
+      Vectors.sparse(size, elements.toBuffer)
     }
 
     val outputColName = $(outputCol)
