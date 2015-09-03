@@ -70,7 +70,7 @@ class Gather(override val uid: String) extends Transformer with GatherParams {
     val grouped = dataset.groupBy(pkCols :+ col($(keyCol)) : _*)
     val aggregateCol = s"${uid}_value_aggregate"
     val aggregated = $(valueAgg) match {
-      case "sum" => grouped.agg(sum($(valueCol)) as aggregateCol)
+      case "sum"   => grouped.agg(sum($(valueCol))   as aggregateCol)
       case "count" => grouped.agg(count($(valueCol)) as aggregateCol)
     }
 
