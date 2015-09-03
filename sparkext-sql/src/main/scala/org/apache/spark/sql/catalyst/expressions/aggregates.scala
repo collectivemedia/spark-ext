@@ -29,6 +29,8 @@ case class CollectArrayFunction(
 
   def this() = this(null, null) // Required for serialization.
 
+  // Reducing GC pressure with this trick
+
   var firstValue: Any = _
   var builder: mutable.ListBuffer[Any] = _
 
@@ -55,7 +57,7 @@ case class CollectArrayFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstValue == null && builder == null) {
-      new GenericArrayData(Const.emptyArrayOfAny)
+      Const.emptyGenericArrayData
     } else if (firstValue != null && builder == null) {
       new GenericArrayData(Array(firstValue))
     } else if (firstValue == null && builder != null) {
@@ -84,6 +86,8 @@ case class CollectPartialArrayFunction(
 
   def this() = this(null, null) // Required for serialization.
 
+  // Reducing GC pressure with this trick
+
   var firstValue: Any = _
   var builder: mutable.ListBuffer[Any] = _
 
@@ -110,7 +114,7 @@ case class CollectPartialArrayFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstValue == null && builder == null) {
-      new GenericArrayData(Const.emptyArrayOfAny)
+      Const.emptyGenericArrayData
     } else if (firstValue != null && builder == null) {
       new GenericArrayData(Array(firstValue))
     } else if (firstValue == null && builder != null) {
@@ -140,11 +144,13 @@ case class CombinePartialArraysFunction(
 
   def this() = this(null, null) // Required for serialization.
 
-  var firstArray: Array[Any] = _
+  // Reducing GC pressure with this trick
+
+  var firstArray: GenericArrayData = _
   var builder: mutable.ListBuffer[Any] = _
 
   override def update(input: InternalRow): Unit = {
-    val inputSetEval = inputSet.eval(input).asInstanceOf[GenericArrayData].array
+    val inputSetEval = inputSet.eval(input).asInstanceOf[GenericArrayData]
 
     if (firstArray == null && builder == null) {
       // Got first array
@@ -152,14 +158,14 @@ case class CombinePartialArraysFunction(
     } else if (firstArray != null && builder == null) {
       // Got second value
       builder = mutable.ListBuffer.empty[Any]
-      val inputIterator = firstArray.iterator ++ inputSetEval.iterator
+      val inputIterator = firstArray.array.iterator ++ inputSetEval.array.iterator
       while (inputIterator.hasNext) {
         builder += inputIterator.next
       }
       firstArray = null
     } else if (firstArray == null && builder != null) {
       // Got 2+ values
-      val inputIterator = inputSetEval.iterator
+      val inputIterator = inputSetEval.array.iterator
       while (inputIterator.hasNext) {
         builder += inputIterator.next
       }
@@ -170,9 +176,9 @@ case class CombinePartialArraysFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstArray == null && builder == null) {
-      new GenericArrayData(Const.emptyArrayOfAny)
+      Const.emptyGenericArrayData
     } else if (firstArray != null && builder == null) {
-      new GenericArrayData(firstArray)
+      firstArray
     } else if (firstArray == null && builder != null) {
       new GenericArrayData(builder.toArray)
     } else {
