@@ -57,7 +57,7 @@ case class CollectArrayFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstValue == null && builder == null) {
-      Const.emptyGenericArrayData
+      new GenericArrayData(Array.empty)
     } else if (firstValue != null && builder == null) {
       new GenericArrayData(Array(firstValue))
     } else if (firstValue == null && builder != null) {
@@ -114,7 +114,7 @@ case class CollectPartialArrayFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstValue == null && builder == null) {
-      Const.emptyGenericArrayData
+      new GenericArrayData(Array.empty)
     } else if (firstValue != null && builder == null) {
       new GenericArrayData(Array(firstValue))
     } else if (firstValue == null && builder != null) {
@@ -176,7 +176,7 @@ case class CombinePartialArraysFunction(
 
   override def eval(input: InternalRow): Any = {
     if (firstArray == null && builder == null) {
-      Const.emptyGenericArrayData
+      new GenericArrayData(Array.empty)
     } else if (firstArray != null && builder == null) {
       firstArray
     } else if (firstArray == null && builder != null) {

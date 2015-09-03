@@ -32,9 +32,8 @@ private[feature] trait GatherEncoderParams
     val inputColName = $(inputCol)
     val inputColDataType = schema(inputColName).dataType
     val inputColStructSchema = inputColDataType match {
-      case ArrayType(structType: StructType, false) => structType
-      case ArrayType(structType: StructType, true) =>
-        throw new IllegalArgumentException(s"Input column data type doesn't support ArrayType with 'containsNull=true'")
+      case ArrayType(structType: StructType, _) =>
+        structType
       case other =>
         throw new IllegalArgumentException(s"Input column data type $other is not supported.")
     }
@@ -164,11 +163,11 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 /**
  * Model fitted by [[GatherEncoder]]
  *
- * @param keys  Ordered list of keys, corresponding column indices in feature vector
+ * @param modelKeys  Ordered list of keys, corresponding column indices in feature vector
  */
 class GatherEncoderModel(
   override val uid: String,
-  val keys: Array[Any]
+  val modelKeys: Array[Any]
 ) extends Model[GatherEncoderModel] with GatherEncoderParams {
 
   def this(keys: Array[Any]) = this(Identifiable.randomUID("gatheredEncoder"), keys)
@@ -190,9 +189,9 @@ class GatherEncoderModel(
     allOther -> true
   )
 
-  private val labels: Array[String] = keys.map(_.toString)
+  private val labels: Array[String] = modelKeys.map(_.toString)
 
-  private val keyIndex: Map[Any, Int] = keys.zipWithIndex.toMap
+  private val keyIndex: Map[Any, Int] = modelKeys.zipWithIndex.toMap
 
   override def transform(dataset: DataFrame): DataFrame = {
     val outputSchema = transformSchema(dataset.schema)
@@ -202,34 +201,48 @@ class GatherEncoderModel(
     val valueColName = $(valueCol)
 
     val allOtherEnabled = $(allOther)
+    val featureSize = if (allOtherEnabled) modelKeys.length + 1 else modelKeys.length
 
-    val encoder = udf { (names: mutable.WrappedArray[AnyRef], values: mutable.WrappedArray[Double]) =>
-      require(names.length == values.length,
-        s"Keys names length doesn't match with values length")
+    val encoder = udf { (keys: mutable.WrappedArray[AnyRef], values: mutable.WrappedArray[Double]) =>
 
-      var i: Int = 0
-      val elements = mutable.Map.empty[Int, Double]
-      while (i < names.length) {
-        val name = names(i)
-        val value = values(i)
+      if (keys == null && values == null) {
+        Vectors.sparse(featureSize, Nil)
 
-        keyIndex.get(name) match {
-          // Take latest value for key
-          case Some(idx) =>
-            elements(idx) = value
-          // Accumulate values is all other enabled
-          case None if allOtherEnabled =>
-            val allOther = elements.getOrElse(keys.length, 0.0)
-            elements.update(keys.length, allOther + value)
-          // Ignore key if all other is disables
-          case None =>
+      } else if (keys != null && values != null) {
+
+        require(keys.length == values.length,
+          s"Keys names length doesn't match with values length")
+
+        if (keys.length > 0) {
+          var i: Int = 0
+          val elements = mutable.Map.empty[Int, Double]
+          while (i < keys.length) {
+            val key = keys(i)
+            val value = values(i)
+
+            keyIndex.get(key) match {
+              // Take latest value for key
+              case Some(idx) =>
+                elements(idx) = value
+              // Accumulate values is all other enabled
+              case None if allOtherEnabled =>
+                val allOther = elements.getOrElse(modelKeys.length, 0.0)
+                elements.update(modelKeys.length, allOther + value)
+              // Ignore key if all other is disables
+              case None =>
+            }
+
+            i += 1
+          }
+          Vectors.sparse(featureSize, elements.toBuffer)
+
+        } else {
+          Vectors.sparse(featureSize, Nil)
         }
 
-        i += 1
+      } else {
+        throw new IllegalArgumentException(s"Keys and Values are not consistent")
       }
-
-      val size = if (allOtherEnabled) keys.length + 1 else keys.length
-      Vectors.sparse(size, elements.toBuffer)
     }
 
     val outputColName = $(outputCol)
@@ -237,8 +250,8 @@ class GatherEncoderModel(
     val metadata = outputSchema($(outputCol)).metadata
     dataset.select(col("*"),
       encoder(
-        dataset(s"$inputColName.$keyColName").cast(ArrayType(StringType, containsNull = false)),
-        dataset(s"$inputColName.$valueColName").cast(ArrayType(DoubleType, containsNull = false))
+        dataset(s"$inputColName.$keyColName").cast(ArrayType(StringType)),
+        dataset(s"$inputColName.$valueColName").cast(ArrayType(DoubleType))
       ).as(outputColName, metadata))
 
   }
@@ -253,7 +266,7 @@ class GatherEncoderModel(
   }
 
   override def copy(extra: ParamMap): GatherEncoderModel = {
-    val copied = new GatherEncoderModel(uid, keys)
+    val copied = new GatherEncoderModel(uid, modelKeys)
     copyValues(copied, extra).setParent(parent)
   }
 

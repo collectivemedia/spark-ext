@@ -13,12 +13,14 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     StructField("sites", ArrayType(StructType(Seq(
       StructField("site", StringType),
       StructField("impressions", LongType
-    ))), containsNull = false))
+    ))), containsNull = true))
   ))
 
   val cookie1 = "cookie1"
   val cookie2 = "cookie2"
   val cookie3 = "cookie3"
+  val cookie4 = "cookie4"
+  val cookie5 = "cookie5"
 
   val dataset = sqlContext.createDataFrame(sc.parallelize(Seq(
     Row(cookie1, Array(
@@ -32,7 +34,9 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     )),
     Row(cookie3, Array(
       Row("sport.com", 100L)
-    ))
+    )),
+    Row(cookie4, Array.empty[Row]),
+    Row(cookie5, null)
   )), schema)
 
   val baseEncoder = new GatherEncoderModel(Array("google.com", "bbc.com", "cnn.com"))
@@ -60,9 +64,15 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     assert(features(cookie2).toSparse.indices.toSeq == 1 :: Nil)
     assert(features(cookie2).toSparse.values.toSeq == 20 :: Nil)
 
-    assert(features(cookie3).size == 3)
-    assert(features(cookie3).toSparse.indices.toSeq == Nil)
-    assert(features(cookie3).toSparse.values.toSeq == Nil)
+    def assertEmptyFeatures(cookie: String): Unit = {
+      assert(features(cookie).size == 3)
+      assert(features(cookie).toSparse.indices.toSeq == Nil)
+      assert(features(cookie).toSparse.values.toSeq == Nil)
+    }
+
+    assertEmptyFeatures(cookie3)
+    assertEmptyFeatures(cookie4)
+    assertEmptyFeatures(cookie5)
   }
 
   it should "encode categories with all other" in {
@@ -80,6 +90,15 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     assert(features(cookie3).size == 4)
     assert(features(cookie3).toSparse.indices.toSeq == 3 :: Nil)
     assert(features(cookie3).toSparse.values.toSeq == 100 :: Nil)
+
+    def assertEmptyFeatures(cookie: String): Unit = {
+      assert(features(cookie).size == 4)
+      assert(features(cookie).toSparse.indices.toSeq == Nil)
+      assert(features(cookie).toSparse.values.toSeq == Nil)
+    }
+
+    assertEmptyFeatures(cookie4)
+    assertEmptyFeatures(cookie5)
   }
 
 }
