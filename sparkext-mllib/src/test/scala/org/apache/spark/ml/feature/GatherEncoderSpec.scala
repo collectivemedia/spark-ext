@@ -52,35 +52,35 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
   "Gather Encoder" should "collect all keys when cover is 100.0" in {
     val encoder = baseEncoder.setCover(100.0)
     val features = encoder.fit(dataset)
-    assert(features.keys.length == 9)
+    assert(features.modelKeys.length == 9)
   }
 
   it should "exclude imdb.com for 95% coverage" in {
     val encoder = baseEncoder.setCover(95.0)
     val features = encoder.fit(dataset)
-    assert(features.keys.length == 8)
-    assert(!features.keys.contains("imdb.com"))
+    assert(features.modelKeys.length == 8)
+    assert(!features.modelKeys.contains("imdb.com"))
   }
 
   it should "exclude amazon.com for 90% coverage" in {
     val encoder = baseEncoder.setCover(90.0)
     val features = encoder.fit(dataset)
-    assert(features.keys.length == 7)
-    assert(!features.keys.contains("amazon.com"))
+    assert(features.modelKeys.length == 7)
+    assert(!features.modelKeys.contains("amazon.com"))
   }
 
   it should "exclude netflix.com for 85% coverage" in {
     val encoder = baseEncoder.setCover(85.0)
     val features = encoder.fit(dataset)
-    assert(features.keys.length == 6)
-    assert(!features.keys.contains("netflix.com"))
+    assert(features.modelKeys.length == 6)
+    assert(!features.modelKeys.contains("netflix.com"))
   }
 
   it should "exclude sport.com for 75% coverage" in {
     val encoder = baseEncoder.setCover(75.0)
     val features = encoder.fit(dataset)
-    assert(features.keys.length == 5)
-    assert(!features.keys.contains("sport.com"))
+    assert(features.modelKeys.length == 5)
+    assert(!features.modelKeys.contains("sport.com"))
   }
 
 }
