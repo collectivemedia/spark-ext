@@ -186,7 +186,7 @@ class GatherEncoderModel(
 
   setDefault(
     cover -> 100.0,
-    allOther -> true
+    allOther -> false
   )
 
   private val labels: Array[String] = modelKeys.map(_.toString)
