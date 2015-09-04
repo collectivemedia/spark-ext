@@ -105,7 +105,7 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
   setDefault(
     cover -> 100.0,
-    allOther -> true
+    allOther -> false
   )
 
   override def fit(dataset: DataFrame): GatherEncoderModel = {
@@ -186,7 +186,7 @@ class GatherEncoderModel(
 
   setDefault(
     cover -> 100.0,
-    allOther -> false
+    allOther -> true
   )
 
   private val labels: Array[String] = modelKeys.map(_.toString)
