@@ -5,21 +5,26 @@ object Dependencies {
 
   val sparkExtSql =
     Seq(
-        sparkSql
+        sparkSql % "provided"
       , Test.scalaTest
     )
 
   val sparkExtMllib =
     Seq(
-        sparkMLLib
+        sparkMLLib % "provided"
       , s2Geometry
       , Test.scalaTest
     )
 
   val sparkExtTest =
     Seq(
-        sparkSql
+        sparkSql % "provided"
       , Test.scalaTest
+    )
+
+  val sparkExtExample =
+    Seq(
+      sparkMLLib
     )
 
 }
