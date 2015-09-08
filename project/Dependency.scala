@@ -12,8 +12,8 @@ object Dependency {
 
   }
 
-  val sparkSql            = "org.apache.spark"           %% "spark-sql"      % V.Spark % "provided"
-  val sparkMLLib          = "org.apache.spark"           %% "spark-mllib"    % V.Spark % "provided"
+  val sparkSql            = "org.apache.spark"           %% "spark-sql"      % V.Spark
+  val sparkMLLib          = "org.apache.spark"           %% "spark-mllib"    % V.Spark
 
   val s2Geometry          = "com.google.common.geometry"  % "s2-geometry"    % V.S2Geometry intransitive()
 

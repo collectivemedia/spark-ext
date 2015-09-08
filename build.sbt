@@ -96,7 +96,7 @@ lazy val root = Project("spark-ext", file(".")).
     site.addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), "/"),
     git.gitRemoteRepo := "git@github.com:collectivemedia/spark-ext.git"
   ).
-  aggregate(sparkextSql, sparkextMllib, sparkextTest)
+  aggregate(sparkextSql, sparkextMllib, sparkextTest, sparkextExample)
 
 // Spark Ext Projects
 
@@ -114,3 +114,10 @@ lazy val sparkextTest =
   SparkExtProject("sparkext-test")
     .settings(publish :=())
     .settings(publishLocal :=())
+
+lazy val sparkextExample =
+  SparkExtProject("sparkext-example")
+    .dependsOn(sparkextMllib)
+    .settings(publish :=())
+    .settings(publishLocal :=())
+
