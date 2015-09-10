@@ -46,7 +46,7 @@ class S2CellTransformer(override val uid: String) extends Transformer {
 
   def setLatCol(value: String): this.type = set(latCol, value)
 
-  def setLogCol(value: String): this.type = set(lonCol, value)
+  def setLonCol(value: String): this.type = set(lonCol, value)
 
   def setCellCol(value: String): this.type = set(cellCol, value)
 
