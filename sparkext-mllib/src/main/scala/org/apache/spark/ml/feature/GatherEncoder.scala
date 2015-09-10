@@ -194,6 +194,12 @@ class GatherEncoderModel(
   private val keyIndex: Map[Any, Int] = modelKeys.zipWithIndex.toMap
 
   override def transform(dataset: DataFrame): DataFrame = {
+
+    if (modelKeys.isEmpty) {
+      throw new IllegalArgumentException(s"Can't encode gathered data with empty model keys. " +
+        s"Check that input column $getInputCol has data.")
+    }
+
     val outputSchema = transformSchema(dataset.schema)
 
     val inputColName = $(inputCol)
