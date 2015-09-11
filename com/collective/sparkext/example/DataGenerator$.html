@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>functions - org.apache.spark.sql.ext.functions</title>
-          <meta name="description" content="functions - org.apache.spark.sql.ext.functions" />
-          <meta name="keywords" content="functions org.apache.spark.sql.ext.functions" />
+          <title>DataGenerator - com.collective.sparkext.example.DataGenerator</title>
+          <meta name="description" content="DataGenerator - com.collective.sparkext.example.DataGenerator" />
+          <meta name="keywords" content="DataGenerator com.collective.sparkext.example.DataGenerator" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../../../index.html';
-            var hash = 'org.apache.spark.sql.ext.functions$';
+            var url = '../../../../index.html';
+            var hash = 'com.collective.sparkext.example.DataGenerator$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../../lib/object_big.png" />
-        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="package.html" class="extype" name="org.apache.spark.sql.ext">ext</a></p>
-        <h1>functions</h1>
+        <img src="../../../../lib/object_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.collective">collective</a>.<a href="../package.html" class="extype" name="com.collective.sparkext">sparkext</a>.<a href="package.html" class="extype" name="com.collective.sparkext.example">example</a></p>
+        <h1>DataGenerator</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,14 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">functions</span>
+        <span class="name">DataGenerator</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.App" class="extype" target="_top">App</a> with <a href="PositivePredictors.html" class="extype" name="com.collective.sparkext.example.PositivePredictors">PositivePredictors</a> with <a href="NegativePredictors.html" class="extype" name="com.collective.sparkext.example.NegativePredictors">NegativePredictors</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Generate dummy dataset based on positive/negative predictors: site visitation log + geo location log
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="NegativePredictors.html" class="extype" name="com.collective.sparkext.example.NegativePredictors">NegativePredictors</a>, <a href="PositivePredictors.html" class="extype" name="com.collective.sparkext.example.PositivePredictors">PositivePredictors</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.App" class="extype" target="_top">App</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.DelayedInit" class="extype" target="_top">DelayedInit</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -59,7 +60,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="org.apache.spark.sql.ext.functions"><span>functions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.collective.sparkext.example.DataGenerator"><span>DataGenerator</span></li><li class="in" name="com.collective.sparkext.example.NegativePredictors"><span>NegativePredictors</span></li><li class="in" name="com.collective.sparkext.example.PositivePredictors"><span>PositivePredictors</span></li><li class="in" name="scala.App"><span>App</span></li><li class="in" name="scala.DelayedInit"><span>DelayedInit</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,6 +151,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.App#args" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="args:Array[String]"></a>
+      <a id="args:Array[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">args</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>App</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -175,26 +189,26 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.sql.ext.functions#collectArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="collectArray(expr:org.apache.spark.sql.Column):org.apache.spark.sql.Column"></a>
-      <a id="collectArray(Column):Column"></a>
+    </li><li name="scala.App#delayedInit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="delayedInit(body:=&gt;Unit):Unit"></a>
+      <a id="delayedInit(⇒Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">collectArray</span><span class="params">(<span name="expr">expr: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.Column" class="extype" target="_top">Column</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.Column" class="extype" target="_top">Column</a></span>
+        <span class="name">delayedInit</span><span class="params">(<span name="body">body: ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>App → DelayedInit</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -221,6 +235,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.App#executionStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="executionStart:Long"></a>
+      <a id="executionStart:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">executionStart</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>App</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -233,13 +260,26 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.collective.sparkext.example.DataGenerator#geoW" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="geoW:java.io.PrintWriter"></a>
+      <a id="geoW:PrintWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">geoW</span><span class="result">: <span class="extype" name="java.io.PrintWriter">PrintWriter</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -279,6 +319,58 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.App#main" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="main(args:Array[String]):Unit"></a>
+      <a id="main(Array[String]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">main</span><span class="params">(<span name="args">args: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>App</dd></dl></div>
+    </li><li name="com.collective.sparkext.example.DataGenerator#nGeo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nGeo:Seq[String]"></a>
+      <a id="nGeo:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nGeo</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#nResp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nResp:Seq[String]"></a>
+      <a id="nResp:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nResp</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#nSites" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nSites:Seq[String]"></a>
+      <a id="nSites:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nSites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -292,6 +384,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.collective.sparkext.example.DataGenerator#negative" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="negative:Seq[String]"></a>
+      <a id="negative:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">negative</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.NegativePredictors#negativePredictors" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="negativePredictors:com.collective.sparkext.example.Predictors{vallat:Double;vallon:Double;valallSites:Seq[String]}"></a>
+      <a id="negativePredictors:Predictors{.../*3definitionsintyperefinement*/}"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">negativePredictors</span><span class="result">: <a href="Predictors.html" class="extype" name="com.collective.sparkext.example.Predictors">Predictors</a> { ... /* 3 definitions in type refinement */ }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="NegativePredictors.html" class="extype" name="com.collective.sparkext.example.NegativePredictors">NegativePredictors</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -318,6 +436,97 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.collective.sparkext.example.DataGenerator#pGeo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pGeo:Seq[String]"></a>
+      <a id="pGeo:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pGeo</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#pResp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pResp:Seq[String]"></a>
+      <a id="pResp:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pResp</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#pSites" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pSites:Seq[String]"></a>
+      <a id="pSites:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pSites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#positive" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="positive:Seq[String]"></a>
+      <a id="positive:Seq[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">positive</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.PositivePredictors#positivePredictors" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="positivePredictors:com.collective.sparkext.example.Predictors{vallat:Double;vallon:Double;valallSites:Seq[String]}"></a>
+      <a id="positivePredictors:Predictors{.../*3definitionsintyperefinement*/}"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">positivePredictors</span><span class="result">: <a href="Predictors.html" class="extype" name="com.collective.sparkext.example.Predictors">Predictors</a> { ... /* 3 definitions in type refinement */ }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PositivePredictors.html" class="extype" name="com.collective.sparkext.example.PositivePredictors">PositivePredictors</a></dd></dl></div>
+    </li><li name="com.collective.sparkext.example.DataGenerator#responseW" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="responseW:java.io.PrintWriter"></a>
+      <a id="responseW:PrintWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseW</span><span class="result">: <span class="extype" name="java.io.PrintWriter">PrintWriter</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.collective.sparkext.example.DataGenerator#sitesW" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sitesW:java.io.PrintWriter"></a>
+      <a id="sitesW:PrintWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sitesW</span><span class="result">: <span class="extype" name="java.io.PrintWriter">PrintWriter</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -410,7 +619,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="com.collective.sparkext.example.NegativePredictors">
+              <h3>Inherited from <a href="NegativePredictors.html" class="extype" name="com.collective.sparkext.example.NegativePredictors">NegativePredictors</a></h3>
+            </div><div class="parent" name="com.collective.sparkext.example.PositivePredictors">
+              <h3>Inherited from <a href="PositivePredictors.html" class="extype" name="com.collective.sparkext.example.PositivePredictors">PositivePredictors</a></h3>
+            </div><div class="parent" name="scala.App">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.App" class="extype" target="_top">App</a></h3>
+            </div><div class="parent" name="scala.DelayedInit">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.DelayedInit" class="extype" target="_top">DelayedInit</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
@@ -430,6 +647,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>
