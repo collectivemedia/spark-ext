@@ -101,4 +101,11 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     assertEmptyFeatures(cookie5)
   }
 
+  it should "remove input col" in {
+    val encoder = baseEncoder.setKeepInputCol(false)
+    val encoded = encoder.transform(dataset)
+    assert(encoded.schema.size == dataset.schema.size)
+    assert(!encoded.schema.exists(_.name == "sites"))
+  }
+
 }

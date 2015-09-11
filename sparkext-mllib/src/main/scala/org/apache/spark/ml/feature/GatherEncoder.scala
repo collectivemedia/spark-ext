@@ -23,9 +23,14 @@ private[feature] trait GatherEncoderParams
   val allOther: Param[Boolean] = new Param[Boolean](this, "allOther",
     "Add all other column")
 
+  val keepInputCol: Param[Boolean] = new Param[Boolean](this, "keepInputCol",
+    "Keep input column in transformed data frame")
+
   def getCover: Double = $(cover)
 
   def getAllOther: Boolean = $(allOther)
+
+  def getKeepInputCol: Boolean = $(keepInputCol)
 
   protected def validateSchema(schema: StructType): Unit = {
     // Check that inputCol is array of StructType
@@ -103,9 +108,12 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
   def setAllOther(value: Boolean): this.type = set(allOther, value)
 
+  def setKeepInputCol(value: Boolean): this.type = set(keepInputCol, value)
+
   setDefault(
     cover -> 100.0,
-    allOther -> false
+    allOther -> false,
+    keepInputCol -> true
   )
 
   override def fit(dataset: DataFrame): GatherEncoderModel = {
@@ -153,7 +161,13 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
   override def transformSchema(schema: StructType): StructType = {
     validateSchema(schema)
     // at this point labels and size of feature vectors is unknown
-    SchemaUtils.appendColumn(schema, StructField($(outputCol), new VectorUDT))
+    val outputSchema = SchemaUtils.appendColumn(schema, StructField($(outputCol), new VectorUDT))
+
+    if (getKeepInputCol) {
+      outputSchema
+    } else {
+      StructType(outputSchema.filter(_.name != getInputCol))
+    }
   }
 
   override def copy(extra: ParamMap): GatherEncoder = defaultCopy(extra)
@@ -184,9 +198,12 @@ class GatherEncoderModel(
 
   def setAllOther(value: Boolean): this.type = set(allOther, value)
 
+  def setKeepInputCol(value: Boolean): this.type = set(keepInputCol, value)
+
   setDefault(
     cover -> 100.0,
-    allOther -> true
+    allOther -> true,
+    keepInputCol -> true
   )
 
   private val labels: Array[String] = modelKeys.map(_.toString)
@@ -252,14 +269,19 @@ class GatherEncoderModel(
     }
 
     val outputColName = $(outputCol)
-
     val metadata = outputSchema($(outputCol)).metadata
-    dataset.select(col("*"),
-      encoder(
-        dataset(s"$inputColName.$keyColName").cast(ArrayType(StringType)),
-        dataset(s"$inputColName.$valueColName").cast(ArrayType(DoubleType))
-      ).as(outputColName, metadata))
 
+    val encodedCol = encoder(
+      dataset(s"$inputColName.$keyColName").cast(ArrayType(StringType)),
+      dataset(s"$inputColName.$valueColName").cast(ArrayType(DoubleType))
+    ).as(outputColName, metadata)
+
+    if (getKeepInputCol) {
+      dataset.select(col("*"), encodedCol)
+    } else {
+      val cols = dataset.schema.fieldNames.filter(_ != getInputCol).map(col)
+      dataset.select(cols :+ encodedCol: _*)
+    }
   }
 
   override def transformSchema(schema: StructType): StructType = {
@@ -268,7 +290,13 @@ class GatherEncoderModel(
     val attrLabels = if ($(allOther)) labels :+ "all other" else labels
     val attrs: Array[Attribute] = attrLabels.map(lbl => new NumericAttribute(Some(lbl)))
     val attrGroup = new AttributeGroup($(outputCol), attrs)
-    SchemaUtils.appendColumn(schema, attrGroup.toStructField())
+    val outputSchema = SchemaUtils.appendColumn(schema, attrGroup.toStructField())
+
+    if (getKeepInputCol) {
+      outputSchema
+    } else {
+      StructType(outputSchema.filter(_.name != getInputCol))
+    }
   }
 
   override def copy(extra: ParamMap): GatherEncoderModel = {
