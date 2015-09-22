@@ -8,7 +8,7 @@ import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.evaluation.BinaryClassificationEvaluator
 import org.apache.spark.ml.feature.{VectorAssembler, GatherEncoder, S2CellTransformer, Gather}
 import org.apache.spark.ml.tuning.{ParamGridBuilder, CrossValidator}
-import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
+import org.apache.spark.mllib.evaluation.BinaryModelMetrics
 import org.apache.spark.mllib.linalg.DenseVector
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Row, DataFrame}
@@ -139,7 +139,7 @@ object SparkMlExtExample extends App with Sites with Geo with Response {
   }
 
   println("Evaluate model")
-  val metrics = new BinaryClassificationMetrics(scoreAndLabels)
+  val metrics = new BinaryModelMetrics(scoreAndLabels)
   val auc = metrics.areaUnderROC()
 
   println(s"Model AUC: $auc")

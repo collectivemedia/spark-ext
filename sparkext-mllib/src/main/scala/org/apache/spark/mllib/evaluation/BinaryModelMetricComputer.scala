@@ -9,13 +9,13 @@ private[evaluation] object AudienceReach extends BinaryClassificationMetricCompu
     if (totalPopulation == 0) {
       1.0
     } else {
-      (c.numTruePositives.toDouble + c.numFalseNegatives) / totalPopulation
+      (c.numTruePositives.toDouble + c.numFalsePositives.toDouble) / totalPopulation
     }
   }
 }
 
 private[evaluation] object Lift extends BinaryClassificationMetricComputer {
   override def apply(c: BinaryConfusionMatrix): Double = {
-    Recall(c)/AudienceReach(c)
+    Recall(c) / AudienceReach(c)
   }
 }

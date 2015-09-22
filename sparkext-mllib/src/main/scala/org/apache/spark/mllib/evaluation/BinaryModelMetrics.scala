@@ -43,7 +43,7 @@ import org.apache.spark.sql.DataFrame
  * @since 1.3.0
  */
 @Experimental
-class BinaryClassificationMetrics(
+class BinaryModelMetrics(
   val scoreAndLabels: RDD[(Double, Double)],
   val numBins: Int) extends Logging {
 
@@ -77,7 +77,7 @@ class BinaryClassificationMetrics(
   def thresholds(): RDD[Double] = cumulativeCounts.map(_._1)
 
   def gains(): RDD[(Double, Double)] = {
-    val gainsChart = createCurve(Recall, AudienceReach)
+    val gainsChart = createCurve(AudienceReach, Recall)
     val sc = confusions.context
     val first = sc.makeRDD(Seq((0.0, 0.0)), 1)
     val last = sc.makeRDD(Seq((1.0, 1.0)), 1)
