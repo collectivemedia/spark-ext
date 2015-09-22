@@ -1,6 +1,6 @@
 package org.apache.spark.mllib.evaluation
 
-import org.apache.spark.mllib.evaluation.binary.{Recall, BinaryClassificationMetricComputer, BinaryConfusionMatrix}
+import org.apache.spark.mllib.evaluation.binary.{BinaryClassificationMetricComputer, BinaryConfusionMatrix, Recall}
 
 /** Precision. Defined as 1.0 when there are no positive examples. */
 private[evaluation] object AudienceReach extends BinaryClassificationMetricComputer {
