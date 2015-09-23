@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>S2CellTransformer - org.apache.spark.ml.feature.S2CellTransformer</title>
-          <meta name="description" content="S2CellTransformer - org.apache.spark.ml.feature.S2CellTransformer" />
-          <meta name="keywords" content="S2CellTransformer org.apache.spark.ml.feature.S2CellTransformer" />
+          <title>Downsampling - org.apache.spark.ml.sampling.Downsampling</title>
+          <meta name="description" content="Downsampling - org.apache.spark.ml.sampling.Downsampling" />
+          <meta name="keywords" content="Downsampling org.apache.spark.ml.sampling.Downsampling" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
-            var hash = 'org.apache.spark.ml.feature.S2CellTransformer';
+            var hash = 'org.apache.spark.ml.sampling.Downsampling';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.feature">feature</a></p>
-        <h1>S2CellTransformer</h1>
+        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.sampling">sampling</a></p>
+        <h1>Downsampling</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,14 +35,15 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></span>
+        <span class="name">Downsampling</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a>] with <span class="extype" name="org.apache.spark.ml.sampling.DownsamplingParams">DownsamplingParams</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Transform latitude and longitude into S2 Cell id
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Downsample input dataset in order to reduce class ratio
+between positive (primary) and negative (secondary) classes
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.ml.sampling.DownsamplingParams">DownsamplingParams</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasLabelCol" class="extype" target="_top">HasLabelCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -60,7 +61,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="org.apache.spark.ml.feature.S2CellTransformer"><span>S2CellTransformer</span></li><li class="in" name="org.apache.spark.ml.Transformer"><span>Transformer</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="org.apache.spark.ml.sampling.Downsampling"><span>Downsampling</span></li><li class="in" name="org.apache.spark.ml.sampling.DownsamplingParams"><span>DownsamplingParams</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasOutputCol"><span>HasOutputCol</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasLabelCol"><span>HasLabelCol</span></li><li class="in" name="org.apache.spark.ml.Estimator"><span>Estimator</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -80,29 +81,29 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.apache.spark.ml.feature.S2CellTransformer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="&lt;init&gt;:S2CellTransformer"></a>
+              <ol><li name="org.apache.spark.ml.sampling.Downsampling#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():org.apache.spark.ml.sampling.Downsampling"></a>
+      <a id="&lt;init&gt;:Downsampling"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="params">()</span>
+        <span class="name">Downsampling</span><span class="params">()</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="&lt;init&gt;:S2CellTransformer"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.sampling.Downsampling"></a>
+      <a id="&lt;init&gt;:Downsampling"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">Downsampling</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
       </h4>
       
@@ -206,29 +207,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#cellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cellCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="cellCol:Param[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cellCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="org.apache.spark.ml.param.Params#clear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type"></a>
-      <a id="clear(Param[_]):S2CellTransformer.this.type"></a>
+      <a id="clear(Param[_]):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
@@ -251,19 +239,19 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="copy(ParamMap):S2CellTransformer"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.sampling.Downsampling"></a>
+      <a id="copy(ParamMap):Downsampling"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a></span>
+        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Transformer → PipelineStage → Params</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a> → Estimator → PipelineStage → Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#copyValues" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T"></a>
       <a id="copyValues[T&lt;:Params](T,ParamMap):T"></a>
@@ -387,6 +375,61 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fit(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.ml.sampling.DownsamplingModel"></a>
+      <a id="fit(DataFrame):DownsamplingModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a> → Estimator</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMaps:Array[org.apache.spark.ml.param.ParamMap]):Seq[M]"></a>
+      <a id="fit(DataFrame,Array[ParamMap]):Seq[DownsamplingModel]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMaps">paramMaps: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):M"></a>
+      <a id="fit(DataFrame,ParamMap):DownsamplingModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMap">paramMap: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fit(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):M"></a>
+      <a id="fit(DataFrame,ParamPair[_],ParamPair[_]*):DownsamplingModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="firstParamPair">firstParamPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>, <span name="otherParamPairs">otherParamPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd><dt>Annotations</dt><dd>
+                <span class="name">@varargs</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
       <a id="get[T](Param[T]):Option[T]"></a>
@@ -400,19 +443,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getCellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getCellCol:String"></a>
-      <a id="getCellCol:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCellCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -439,42 +469,29 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLatCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLatCol:String"></a>
-      <a id="getLatCol:String"></a>
+    </li><li name="org.apache.spark.ml.param.shared.HasLabelCol#getLabelCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLabelCol:String"></a>
+      <a id="getLabelCol:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getLatCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">getLabelCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLevel:Int"></a>
-      <a id="getLevel:Int"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasLabelCol</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#getMaxClassRatio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getMaxClassRatio:Double"></a>
+      <a id="getMaxClassRatio:Double"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getLevel</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLonCol:String"></a>
-      <a id="getLonCol:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLonCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">getMaxClassRatio</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
       </h4>
       
@@ -491,6 +508,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#getOutputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutputCol:String"></a>
+      <a id="getOutputCol:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getParam(paramName:String):org.apache.spark.ml.param.Param[Any]"></a>
       <a id="getParam(String):Param[Any]"></a>
@@ -504,6 +534,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.DownsamplingParams#getPrimaryClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPrimaryClass:Double"></a>
+      <a id="getPrimaryClass:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPrimaryClass</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DownsamplingParams</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.DownsamplingParams#getSampleWithReplacement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSampleWithReplacement:Boolean"></a>
+      <a id="getSampleWithReplacement:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSampleWithReplacement</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DownsamplingParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#hasDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean"></a>
       <a id="hasDefault[T](Param[T]):Boolean"></a>
@@ -595,32 +651,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#latCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="latCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="latCol:Param[String]"></a>
+    </li><li name="org.apache.spark.ml.param.shared.HasLabelCol#labelCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="labelCol:org.apache.spark.ml.param.Param[String]"></a>
+      <a id="labelCol:Param[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">latCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">labelCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#level" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="level:org.apache.spark.ml.param.Param[Int]"></a>
-      <a id="level:Param[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">level</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
-      </span>
-      </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasLabelCol</dd></dl></div>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
       <a id="log:Logger"></a>
@@ -777,16 +820,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#lonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lonCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="lonCol:Param[String]"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#maxClassRatio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="maxClassRatio:org.apache.spark.ml.param.Param[Double]"></a>
+      <a id="maxClassRatio:Param[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">lonCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">maxClassRatio</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
       </h4>
       
@@ -829,6 +872,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#outputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputCol:org.apache.spark.ml.param.Param[String]"></a>
+      <a id="outputCol:Param[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#params" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="params:Array[org.apache.spark.ml.param.Param[_]]"></a>
       <a id="params:Array[Param[_]]"></a>
@@ -842,120 +898,159 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.DownsamplingParams#primaryClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="primaryClass:org.apache.spark.ml.param.Param[Double]"></a>
+      <a id="primaryClass:Param[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">primaryClass</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DownsamplingParams</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.DownsamplingParams#sampleWithReplacement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sampleWithReplacement:org.apache.spark.ml.param.Param[Boolean]"></a>
+      <a id="sampleWithReplacement:Param[Boolean]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sampleWithReplacement</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DownsamplingParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type"></a>
-      <a id="set(ParamPair[_]):S2CellTransformer.this.type"></a>
+      <a id="set(ParamPair[_]):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(param:String,value:Any):Params.this.type"></a>
-      <a id="set(String,Any):S2CellTransformer.this.type"></a>
+      <a id="set(String,Any):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="set[T](Param[T],T):S2CellTransformer.this.type"></a>
+      <a id="set[T](Param[T],T):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setCellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setCellCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setCellCol(String):S2CellTransformer.this.type"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setCellCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
-      </span>
-      </h4>
-      
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type"></a>
-      <a id="setDefault(ParamPair[_]*):S2CellTransformer.this.type"></a>
+      <a id="setDefault(ParamPair[_]*):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="setDefault[T](Param[T],T):S2CellTransformer.this.type"></a>
+      <a id="setDefault[T](Param[T],T):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLatCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLatCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setLatCol(String):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#setLabelCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setLabelCol(value:String):Downsampling.this.type"></a>
+      <a id="setLabelCol(String):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLatCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setLabelCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLevel(value:Int):S2CellTransformer.this.type"></a>
-      <a id="setLevel(Int):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#setMaxClassRatio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setMaxClassRatio(value:Double):Downsampling.this.type"></a>
+      <a id="setMaxClassRatio(Double):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLevel</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setMaxClassRatio</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLonCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setLonCol(String):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#setOutputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setOutputCol(value:String):Downsampling.this.type"></a>
+      <a id="setOutputCol(String):Downsampling.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLonCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setOutputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#setPrimaryClass" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPrimaryClass(value:Double):Downsampling.this.type"></a>
+      <a id="setPrimaryClass(Double):Downsampling.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPrimaryClass</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#setSampleWithReplacement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setSampleWithReplacement(value:Boolean):Downsampling.this.type"></a>
+      <a id="setSampleWithReplacement(Boolean):Downsampling.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSampleWithReplacement</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a>.this.type</span>
       </span>
       </h4>
       
@@ -985,49 +1080,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Identifiable → AnyRef → Any</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transform(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.sql.DataFrame"></a>
-      <a id="transform(DataFrame):DataFrame"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Transformer</dd></dl></div>
-    </li><li name="org.apache.spark.ml.Transformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transform(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):org.apache.spark.sql.DataFrame"></a>
-      <a id="transform(DataFrame,ParamMap):DataFrame"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMap">paramMap: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transformer</dd></dl></div>
-    </li><li name="org.apache.spark.ml.Transformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transform(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):org.apache.spark.sql.DataFrame"></a>
-      <a id="transform(DataFrame,ParamPair[_],ParamPair[_]*):DataFrame"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="firstParamPair">firstParamPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>, <span name="otherParamPairs">otherParamPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transformer</dd><dt>Annotations</dt><dd>
-                <span class="name">@varargs</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType):StructType"></a>
       <h4 class="signature">
@@ -1039,7 +1092,7 @@
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → PipelineStage</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a> → PipelineStage</dd></dl></div>
     </li><li name="org.apache.spark.ml.PipelineStage#transformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType,Boolean):StructType"></a>
@@ -1056,7 +1109,7 @@
                 <span class="name">@DeveloperApi</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.sampling.Downsampling#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="uid:String"></a>
       <a id="uid:String"></a>
       <h4 class="signature">
@@ -1068,7 +1121,20 @@
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Identifiable</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.sampling.Downsampling">Downsampling</a> → Identifiable</dd></dl></div>
+    </li><li name="org.apache.spark.ml.sampling.DownsamplingParams#validateAndTransformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="validateAndTransformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
+      <a id="validateAndTransformSchema(StructType):StructType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validateAndTransformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>DownsamplingParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#validateParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateParams():Unit"></a>
       <a id="validateParams():Unit"></a>
@@ -1148,8 +1214,14 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.apache.spark.ml.Transformer">
-              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></h3>
+        <div class="parent" name="org.apache.spark.ml.sampling.DownsamplingParams">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.ml.sampling.DownsamplingParams">DownsamplingParams</span></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasOutputCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasLabelCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasLabelCol" class="extype" target="_top">HasLabelCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.Estimator">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="DownsamplingModel.html" class="extype" name="org.apache.spark.ml.sampling.DownsamplingModel">DownsamplingModel</a>]</h3>
             </div><div class="parent" name="org.apache.spark.ml.PipelineStage">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a></h3>
             </div><div class="parent" name="org.apache.spark.Logging">
