@@ -81,7 +81,7 @@ class Downsampling(override val uid: String) extends Estimator[DownsamplingModel
     } else {
       val desiredSecondaryCnt = primaryCnt * getMaxClassRatio
       val sampleFraction = desiredSecondaryCnt / secondaryCnt
-      log.debug(s"Class ration: $classRatio is above max class ratio: $getMaxClassRatio. Sample fraction: $sampleFraction")
+      log.debug(s"Class ratio: $classRatio is above max class ratio: $getMaxClassRatio. Sample fraction: $sampleFraction")
       copyValues(new DownsamplingModel(uid, Some(sampleFraction)).setParent(this))
     }
 
