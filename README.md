@@ -13,8 +13,8 @@ resolvers += "Collective Media Bintray" at "https://dl.bintray.com/collectivemed
 And use following library dependencies:
 
 ```
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.14"
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.14"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.15"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.15"
 ```
 
 ## Testing
@@ -125,3 +125,16 @@ Optionally apply dimensionality reduction using `top` transformation:
    sorting the values in descending order by the count of users, and choosing the top values from the resulting
    list such that the sum of the distinct user counts over these values covers c percent of all users,
    for example, selecting top sites covering 99% of users.
+
+
+#### Downsampling Negatives
+
+If class ration between positives and negatives is too high, you might want to downsample all you negatives before building a model.
+
+``` scala
+val downsampling = new Downsampling()
+      .setLabelCol("label")
+      .setOutputCol("sample_weight")
+      .setMaxClassRatio(30.0)
+      .setPrimaryClass(1.0) // positive class to keep as-is   
+```
