@@ -129,7 +129,7 @@ Optionally apply dimensionality reduction using `top` transformation:
 
 #### Downsampling Negatives
 
-If class ration between positives and negatives is too high, you might want to downsample all you negatives before building a model.
+If class ratio between positives and negatives is too high, you might want to downsample all you negatives before building a model.
 
 ``` scala
 val downsampling = new Downsampling()
