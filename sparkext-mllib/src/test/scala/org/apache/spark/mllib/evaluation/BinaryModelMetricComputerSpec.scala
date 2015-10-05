@@ -20,7 +20,7 @@ class BinaryModelMetricComputerSpec extends FlatSpec with GivenWhenThen with Tes
           (b.totalCount.numNegatives + b.totalCount.numPositives)
 
         Then(s"audience reach should be equal to $expectedAudienceReach")
-        assert(AudienceReach(b) === expectedAudienceReach)
+        assert(Reach(b) === expectedAudienceReach)
       }
     }
   }

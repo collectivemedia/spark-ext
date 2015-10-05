@@ -77,14 +77,14 @@ class BinaryModelMetrics(
   def thresholds(): RDD[Double] = cumulativeCounts.map(_._1)
 
   def gains(): RDD[(Double, Double)] = {
-    val gainsChart = createCurve(AudienceReach, Recall)
+    val gainsChart = createCurve(Reach, Recall)
     val sc = confusions.context
     val first = sc.makeRDD(Seq((0.0, 0.0)), 1)
     val last = sc.makeRDD(Seq((1.0, 1.0)), 1)
     new UnionRDD[(Double, Double)](sc, Seq(first, gainsChart, last))
   }
 
-  def lift(): RDD[(Double, Double)] = createCurve(Lift, AudienceReach)
+  def lift(): RDD[(Double, Double)] = createCurve(Reach, Lift)
 
   /**
    * Returns the receiver operating characteristic (ROC) curve,
