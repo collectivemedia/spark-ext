@@ -4,7 +4,7 @@ name in ThisBuild := "spark-ext"
 
 organization in ThisBuild := "com.collective.sparkext"
 
-scalaVersion in ThisBuild := "2.10.5"
+scalaVersion in ThisBuild := "2.10.6"
 
 scalacOptions in ThisBuild ++= Seq(
   "-deprecation",
