@@ -13,8 +13,8 @@ resolvers += "Collective Media Bintray" at "https://dl.bintray.com/collectivemed
 And use following library dependencies:
 
 ```
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.15"
-libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.15"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-sql" % "0.0.17"
+libraryDependencies +=  "com.collective.sparkext" %% "sparkext-mllib" % "0.0.17"
 ```
 
 ## Testing
