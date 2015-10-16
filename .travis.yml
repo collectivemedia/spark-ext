@@ -1,18 +1,20 @@
+# Use Docker-based container (instead of OpenVZ)
 sudo: false
 
 cache:
   directories:
     - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot/
+    - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
 
 language: scala
 scala:
-   - 2.10.5
+  - 2.11.7
+  - 2.10.6
 jdk:
   - oraclejdk8
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION -J-Xmx2512m clean +test
+  - sbt ++$TRAVIS_SCALA_VERSION -J-Xmx2512m clean test
 
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
