@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/collectivemedia/spark-ext.svg?branch=master)](https://travis-ci.org/collectivemedia/spark-ext)
 
-Spark ML transformers, estimator, Spark SQL aggregations, etc that are missing in Apache Spark
+Spark ML transformers, estimator, Spark SQL aggregations, etc that are missing in Apache Spark.
+
+That's how we are doing [Audience Modeling](https://databricks.com/blog/2015/10/20/audience-modeling-with-spark-ml-pipelines.html) at Collective
 
 ## Where to get it
 
