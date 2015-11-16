@@ -26,11 +26,16 @@ private[feature] trait GatherEncoderParams
   val keepInputCol: Param[Boolean] = new Param[Boolean](this, "keepInputCol",
     "Keep input column in transformed data frame")
 
+  val failOnEmptyKeys: Param[Boolean] = new Param[Boolean](this, "failOnEmptyKeys",
+    "Fail if gathered key set is empty")
+
   def getCover: Double = $(cover)
 
   def getAllOther: Boolean = $(allOther)
 
   def getKeepInputCol: Boolean = $(keepInputCol)
+
+  def getFailOnEmptyKeys: Boolean = ${failOnEmptyKeys}
 
   protected def validateSchema(schema: StructType): Unit = {
     // Check that inputCol is array of StructType
@@ -110,10 +115,13 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
   def setKeepInputCol(value: Boolean): this.type = set(keepInputCol, value)
 
+  def setFailOnEmptyKeys(value: Boolean): this.type = set(failOnEmptyKeys, value)
+
   setDefault(
     cover -> 100.0,
     allOther -> false,
-    keepInputCol -> true
+    keepInputCol -> true,
+    failOnEmptyKeys -> true
   )
 
   override def fit(dataset: DataFrame): GatherEncoderModel = {
@@ -200,10 +208,13 @@ class GatherEncoderModel(
 
   def setKeepInputCol(value: Boolean): this.type = set(keepInputCol, value)
 
+  def setFailOnEmptyKeys(value: Boolean): this.type = set(failOnEmptyKeys, value)
+
   setDefault(
     cover -> 100.0,
     allOther -> true,
-    keepInputCol -> true
+    keepInputCol -> true,
+    failOnEmptyKeys -> true
   )
 
   private val labels: Array[String] = modelKeys.map(_.toString)
@@ -212,9 +223,13 @@ class GatherEncoderModel(
 
   override def transform(dataset: DataFrame): DataFrame = {
 
-    if (modelKeys.isEmpty) {
+    if (modelKeys.isEmpty && getFailOnEmptyKeys) {
       throw new IllegalArgumentException(s"Can't encode gathered data with empty model keys. " +
         s"Check that input column $getInputCol has data.")
+    }
+
+    if (modelKeys.isEmpty && !getFailOnEmptyKeys) {
+      log.warn(s"Gathered data has empty key set. Check input column $getInputCol")
     }
 
     val outputSchema = transformSchema(dataset.schema)
@@ -228,7 +243,11 @@ class GatherEncoderModel(
 
     val encoder = udf { (keys: mutable.WrappedArray[AnyRef], values: mutable.WrappedArray[Double]) =>
 
-      if (keys == null && values == null) {
+      if (featureSize == 0) {
+        // Special case for empty model keys
+        Vectors.dense(Array.empty[Double])
+
+      } else if (keys == null && values == null) {
         Vectors.sparse(featureSize, Nil)
 
       } else if (keys != null && values != null) {
