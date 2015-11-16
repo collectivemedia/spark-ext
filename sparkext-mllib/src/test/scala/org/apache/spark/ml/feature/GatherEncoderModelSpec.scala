@@ -1,9 +1,10 @@
 package org.apache.spark.ml.feature
 
+import breeze.linalg.DenseVector
 import com.collective.TestSparkContext
-import org.apache.spark.sql.{DataFrame, Row}
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.sql.types._
+import org.apache.spark.sql.{DataFrame, Row}
 import org.scalatest.FlatSpec
 
 class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
@@ -39,11 +40,14 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     Row(cookie5, null)
   )), schema)
 
-  val baseEncoder = new GatherEncoderModel(Array("google.com", "bbc.com", "cnn.com"))
+  def createEncoder(keys: Array[Any]) =
+    new GatherEncoderModel(keys)
     .setInputCol("sites")
     .setOutputCol("features")
     .setKeyCol("site")
     .setValueCol("impressions")
+
+  val baseEncoder = createEncoder(Array("google.com", "bbc.com", "cnn.com"))
 
   def toFeatures(encoder: GatherEncoderModel, dataset: DataFrame): Map[String, Vector] = {
     val encodedDf = encoder.transform(dataset).select("cookie_id", "features")
@@ -106,6 +110,42 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     val encoded = encoder.transform(dataset)
     assert(encoded.schema.size == dataset.schema.size)
     assert(!encoded.schema.exists(_.name == "sites"))
+  }
+
+  it should "fail to encode with empty key set" in {
+    val encoder = createEncoder(Array.empty)
+    intercept[IllegalArgumentException] {
+      encoder.transform(dataset)
+    }
+  }
+
+  it should "output empty vectors for empty keys with all other disabled" in {
+    val encoder = createEncoder(Array.empty)
+      .setFailOnEmptyKeys(false)
+      .setAllOther(false)
+    val features = toFeatures(encoder, dataset)
+    assert(features(cookie1).size == 0)
+  }
+
+  it should "put all values into all other column for empty keys" in {
+    val encoder = createEncoder(Array.empty)
+      .setFailOnEmptyKeys(false)
+      .setAllOther(true)
+
+    val features = toFeatures(encoder, dataset)
+
+    assert(features(cookie1).toArray.toSeq == Seq(26.0))
+    assert(features(cookie2).toArray.toSeq == Seq(24.0))
+    assert(features(cookie3).toArray.toSeq == Seq(100.0))
+
+    def assertEmptyFeatures(cookie: String): Unit = {
+      assert(features(cookie).size == 1)
+      assert(features(cookie).toSparse.indices.toSeq == Nil)
+      assert(features(cookie).toSparse.values.toSeq == Nil)
+    }
+
+    assertEmptyFeatures(cookie4)
+    assertEmptyFeatures(cookie5)
   }
 
 }
