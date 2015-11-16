@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>OptimalBinning - org.apache.spark.ml.feature.OptimalBinning</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -24,9 +28,15 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../../lib/class_big.png" />
+        <img alt="Class" src="../../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.feature">feature</a></p>
-        <h1>OptimalBinning</h1>
+        <h1>OptimalBinning</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="org.apache.spark.ml.feature">package feature</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -41,7 +51,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a>, <span class="extype" name="org.apache.spark.ml.feature.BinningBase">BinningBase</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a>, <span class="extype" name="org.apache.spark.ml.feature.BinningBase">BinningBase</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -67,7 +77,6 @@
               <li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li>
             </ol>
-            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -90,7 +99,11 @@
       <span class="symbol">
         <span class="name">OptimalBinning</span><span class="params">()</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@&lt;init&gt;():org.apache.spark.ml.feature.OptimalBinning" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.feature.OptimalBinning"></a>
@@ -103,7 +116,11 @@
       <span class="symbol">
         <span class="name">OptimalBinning</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@&lt;init&gt;(uid:String):org.apache.spark.ml.feature.OptimalBinning" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -119,9 +136,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SplitOptimizer$OptimalSplitTargetFunction.html"><span class="name">OptimalSplitTargetFunction</span></a><span class="result"> extends <span class="extype" name="breeze.optimize.DiffFunction">DiffFunction</span>[<span class="extype" name="breeze.linalg.DenseVector">DenseVector</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]]</span>
+        <a href="SplitOptimizer$OptimalSplitTargetFunction.html"><span class="name">OptimalSplitTargetFunction</span></a><span class="result"> extends <span class="extype" name="breeze.optimize.DiffFunction">DiffFunction</span>[<span class="extype" name="breeze.linalg.DenseVector">DenseVector</span>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.SplitOptimizer@OptimalSplitTargetFunctionextendsDiffFunction[breeze.linalg.DenseVector[Double]]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
     </li></ol>
             </div>
@@ -131,19 +152,6 @@
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -152,10 +160,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -165,9 +177,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#$" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="$[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
@@ -180,22 +196,13 @@
       <span class="symbol">
         <span class="name">$</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@$[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -204,10 +211,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -219,7 +230,11 @@
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#clear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type"></a>
@@ -232,7 +247,11 @@
       <span class="symbol">
         <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -243,9 +262,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -264,7 +287,11 @@
       <span class="symbol">
         <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.Estimator[org.apache.spark.ml.feature.Binning]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a> → Estimator → PipelineStage → Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#copyValues" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T"></a>
@@ -277,7 +304,11 @@
       <span class="symbol">
         <span class="name">copyValues</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="to">to: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>, <span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#defaultCopy" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T"></a>
@@ -290,7 +321,11 @@
       <span class="symbol">
         <span class="name">defaultCopy</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.defaultCopy.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
@@ -301,9 +336,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -314,9 +353,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.SplitOptimizer#error" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="error(counts:Array[Int]):Double"></a>
@@ -327,9 +370,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">error</span><span class="params">(<span name="counts">counts: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+        <span class="name">error</span><span class="params">(<span name="counts">counts: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@error(counts:Array[Int]):Double" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Mean squared error from ideal split
 </p><div class="fullcomment"><div class="comment cmt"><p>Mean squared error from ideal split
 </p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
@@ -344,7 +391,11 @@
       <span class="symbol">
         <span class="name">explainParam</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@explainParam(param:org.apache.spark.ml.param.Param[_]):String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#explainParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="explainParams():String"></a>
@@ -357,7 +408,11 @@
       <span class="symbol">
         <span class="name">explainParams</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@explainParams():String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#extractParamMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extractParamMap():org.apache.spark.ml.param.ParamMap"></a>
@@ -370,7 +425,11 @@
       <span class="symbol">
         <span class="name">extractParamMap</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@extractParamMap():org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#extractParamMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap"></a>
@@ -383,7 +442,11 @@
       <span class="symbol">
         <span class="name">extractParamMap</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -394,9 +457,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -415,7 +482,11 @@
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@fit(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.ml.feature.Binning" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a> → Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMaps:Array[org.apache.spark.ml.param.ParamMap]):Seq[M]"></a>
@@ -426,9 +497,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMaps">paramMaps: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>]</span>
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMaps">paramMaps: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@fit(dataset:org.apache.spark.sql.DataFrame,paramMaps:Array[org.apache.spark.ml.param.ParamMap]):Seq[M]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):M"></a>
@@ -441,7 +516,11 @@
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMap">paramMap: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@fit(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):M" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):M"></a>
@@ -454,7 +533,11 @@
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="firstParamPair">firstParamPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>, <span name="otherParamPairs">otherParamPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@fit(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):M" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd><dt>Annotations</dt><dd>
                 <span class="name">@varargs</span><span class="args">()</span>
               
@@ -468,9 +551,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromDiff</span><span class="params">(<span name="diff">diff: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+        <span class="name">fromDiff</span><span class="params">(<span name="diff">diff: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@fromDiff(diff:Array[Double]):Array[Double]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
@@ -481,9 +568,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>
+        <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
@@ -496,7 +587,11 @@
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
@@ -507,9 +602,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>
+        <span class="name">getDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasInputCol#getInputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getInputCol:String"></a>
@@ -522,7 +621,11 @@
       <span class="symbol">
         <span class="name">getInputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getInputCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#getNumBins" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getNumBins:Int"></a>
@@ -533,9 +636,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getNumBins</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">getNumBins</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getNumBins:Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.param.Params#getOrDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
@@ -548,7 +655,11 @@
       <span class="symbol">
         <span class="name">getOrDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#getOutputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOutputCol:String"></a>
@@ -561,7 +672,11 @@
       <span class="symbol">
         <span class="name">getOutputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getOutputCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getParam(paramName:String):org.apache.spark.ml.param.Param[Any]"></a>
@@ -572,9 +687,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">getParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getParam(paramName:String):org.apache.spark.ml.param.Param[Any]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#getSampleSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getSampleSize:Int"></a>
@@ -585,9 +704,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSampleSize</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">getSampleSize</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@getSampleSize:Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.param.Params#hasDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean"></a>
@@ -598,9 +721,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.hasDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">hasDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.hasDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#hasParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasParam(paramName:String):Boolean"></a>
@@ -611,9 +738,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">hasParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@hasParam(paramName:String):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -624,9 +755,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasInputCol#inputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="inputCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -639,7 +774,11 @@
       <span class="symbol">
         <span class="name">inputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@inputCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isDefined" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
@@ -650,9 +789,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isDefined</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isDefined</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -663,9 +806,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isSet(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
@@ -676,9 +823,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isSet</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isSet</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@isSet(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isTraceEnabled():Boolean"></a>
@@ -689,9 +840,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@isTraceEnabled():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
@@ -704,7 +859,11 @@
       <span class="symbol">
         <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@log:org.slf4j.Logger" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -715,9 +874,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logDebug(msg:=&gt;String):Unit"></a>
@@ -728,9 +891,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logDebug(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -741,9 +908,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logError(msg:=&gt;String):Unit"></a>
@@ -754,9 +925,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logError(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -767,9 +942,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logInfo(msg:=&gt;String):Unit"></a>
@@ -780,9 +959,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logInfo(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logName:String"></a>
@@ -795,7 +978,11 @@
       <span class="symbol">
         <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logName:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -806,9 +993,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logTrace(msg:=&gt;String):Unit"></a>
@@ -819,9 +1010,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logTrace(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -832,9 +1027,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logWarning(msg:=&gt;String):Unit"></a>
@@ -845,9 +1044,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@logWarning(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
@@ -858,9 +1061,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -871,9 +1078,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -884,9 +1095,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#numBins" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="numBins:org.apache.spark.ml.param.Param[Int]"></a>
@@ -897,9 +1112,13 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">numBins</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
+        <span class="name">numBins</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@numBins:org.apache.spark.ml.param.Param[Int]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.SplitOptimizer#optimalSplit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="optimalSplit(x:Array[Double],splits:Int,maxIter:Int,m:Int):Array[Double]"></a>
@@ -910,15 +1129,18 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optimalSplit</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>, <span name="splits">splits: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="maxIter">maxIter: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">100</span></span>, <span name="m">m: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">3</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+        <span class="name">optimalSplit</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>, <span name="splits">splits: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="maxIter">maxIter: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">100</span></span>, <span name="m">m: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">3</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@optimalSplit(x:Array[Double],splits:Int,maxIter:Int,m:Int):Array[Double]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Compute optimal split values to get uniformly
 distributed number of points in each bin
 </p><div class="fullcomment"><div class="comment cmt"><p>Compute optimal split values to get uniformly
 distributed number of points in each bin
-</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>input data that needs to be splitted</p></dd><dt class="param">splits</dt><dd class="cmt"><p>number of splits</p></dd><dt class="param">maxIter</dt><dd class="cmt"><p>max iterations for LBFGS optimizer</p></dd><dt class="param">m</dt><dd class="cmt"><p>memory parameter for LBFGS optimizer</p></dd><dt>returns</dt><dd class="cmt"><p>
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>input data that needs to be splitted</p></dd><dt class="param">splits</dt><dd class="cmt"><p>number of splits</p></dd><dt class="param">maxIter</dt><dd class="cmt"><p>max iterations for LBFGS optimizer</p></dd><dt class="param">m</dt><dd class="cmt"><p>memory parameter for LBFGS optimizer</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#outputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="outputCol:org.apache.spark.ml.param.Param[String]"></a>
       <a id="outputCol:Param[String]"></a>
@@ -930,7 +1152,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">outputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@outputCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#params" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="params:Array[org.apache.spark.ml.param.Param[_]]"></a>
@@ -941,9 +1167,13 @@ distributed number of points in each bin
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]]</span>
+        <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@params:Array[org.apache.spark.ml.param.Param[_]]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.SplitOptimizer#quantiles" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="quantiles(x:Array[Double])(percentiles:Array[Double]):Array[Double]"></a>
@@ -954,9 +1184,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">quantiles</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="params">(<span name="percentiles">percentiles: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+        <span class="name">quantiles</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="params">(<span name="percentiles">percentiles: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@quantiles(x:Array[Double])(percentiles:Array[Double]):Array[Double]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#sampleSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="sampleSize:org.apache.spark.ml.param.Param[Int]"></a>
@@ -967,9 +1201,13 @@ distributed number of points in each bin
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sampleSize</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
+        <span class="name">sampleSize</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@sampleSize:org.apache.spark.ml.param.Param[Int]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type"></a>
@@ -982,7 +1220,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(param:String,value:Any):Params.this.type"></a>
@@ -993,9 +1235,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@set(param:String,value:Any):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
@@ -1008,7 +1254,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type"></a>
@@ -1021,7 +1271,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
@@ -1034,7 +1288,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#setInputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setInputCol(value:String):OptimalBinning.this.type"></a>
@@ -1047,7 +1305,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">setInputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setInputCol(value:String):OptimalBinning.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#setNumBins" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setNumBins(value:Int):OptimalBinning.this.type"></a>
@@ -1058,9 +1320,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setNumBins</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
+        <span class="name">setNumBins</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setNumBins(value:Int):OptimalBinning.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#setOutputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setOutputCol(value:String):OptimalBinning.this.type"></a>
@@ -1073,7 +1339,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">setOutputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setOutputCol(value:String):OptimalBinning.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#setSampleSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setSampleSize(value:Int):OptimalBinning.this.type"></a>
@@ -1084,9 +1354,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setSampleSize</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
+        <span class="name">setSampleSize</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@setSampleSize(value:Int):OptimalBinning.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
@@ -1099,7 +1373,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.SplitOptimizer#toDiff" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toDiff(values:Array[Double]):Array[Double]"></a>
@@ -1110,9 +1388,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toDiff</span><span class="params">(<span name="values">values: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+        <span class="name">toDiff</span><span class="params">(<span name="values">values: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@toDiff(values:Array[Double]):Array[Double]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></dd></dl></div>
     </li><li name="org.apache.spark.ml.util.Identifiable#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -1125,7 +1407,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Identifiable → AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
@@ -1138,7 +1424,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a> → PipelineStage</dd></dl></div>
     </li><li name="org.apache.spark.ml.PipelineStage#transformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType"></a>
@@ -1149,9 +1439,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="logging">logging: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
+        <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="logging">logging: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>PipelineStage</dd><dt>Annotations</dt><dd>
                 <span class="name">@DeveloperApi</span><span class="args">()</span>
               
@@ -1167,7 +1461,11 @@ distributed number of points in each bin
       <span class="symbol">
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@uid:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.OptimalBinning">OptimalBinning</a> → Identifiable</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#validateParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateParams():Unit"></a>
@@ -1178,9 +1476,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validateParams</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">validateParams</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@validateParams():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -1191,9 +1493,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1210,9 +1516,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1229,9 +1539,13 @@ distributed number of points in each bin
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.OptimalBinning@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1265,15 +1579,15 @@ distributed number of points in each bin
             </div><div class="parent" name="org.apache.spark.ml.param.Params">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></h3>
             </div><div class="parent" name="scala.Serializable">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="org.apache.spark.ml.util.Identifiable">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -1290,6 +1604,7 @@ distributed number of points in each bin
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

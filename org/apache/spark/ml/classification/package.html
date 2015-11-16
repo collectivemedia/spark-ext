@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>classification - org.apache.spark.ml.classification</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -24,9 +28,13 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../../lib/package_big.png" />
+        <img alt="Package" src="../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a></p>
-        <h1>classification</h1>
+        <h1>classification</h1><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -58,7 +66,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.apache.spark.ml.classification.LocalLogisticRegression" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.apache.spark.ml.classification.LocalLogisticRegression" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="LocalLogisticRegressionextendsProbabilisticClassifier[org.apache.spark.mllib.linalg.Vector,org.apache.spark.ml.classification.LocalLogisticRegression,org.apache.spark.ml.classification.LogisticRegressionModel]withLogisticRegressionParamswithLogging"></a>
       <a id="LocalLogisticRegression:LocalLogisticRegression"></a>
       <h4 class="signature">
@@ -69,10 +77,18 @@
       <span class="symbol">
         <a href="LocalLogisticRegression.html"><span class="name">LocalLogisticRegression</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ProbabilisticClassifier" class="extype" target="_top">ProbabilisticClassifier</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="LocalLogisticRegression.html" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>] with <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionParams" class="extype" target="_top">LogisticRegressionParams</a> with <span class="extype" name="org.apache.spark.Logging">Logging</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Local version of <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegression" class="extype" target="_top">LogisticRegression</a>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.package@LocalLogisticRegressionextendsProbabilisticClassifier[org.apache.spark.mllib.linalg.Vector,org.apache.spark.ml.classification.LocalLogisticRegression,org.apache.spark.ml.classification.LogisticRegressionModel]withLogisticRegressionParamswithLogging" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Local version of <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegression" class="extype" target="_top">LogisticRegression</a>
 When DataFrame is too small that it can easily fit into single node it doesn't make sense
-to build model using RDD, it can be built on single node.</p>
+to build model using RDD, it can be built on single node.</p><div class="fullcomment"><div class="comment cmt"><p>Local version of <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegression" class="extype" target="_top">LogisticRegression</a>
+When DataFrame is too small that it can easily fit into single node it doesn't make sense
+to build model using RDD, it can be built on single node. Essentially using Spark
+as distributed Executor
+</p></div></div>
     </li></ol>
             </div>
 
@@ -102,6 +118,7 @@ to build model using RDD, it can be built on single node.</p>
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

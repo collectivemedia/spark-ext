@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>S2CellTransformer - org.apache.spark.ml.feature.S2CellTransformer</title>
-          <meta name="description" content="S2CellTransformer - org.apache.spark.ml.feature.S2CellTransformer" />
-          <meta name="keywords" content="S2CellTransformer org.apache.spark.ml.feature.S2CellTransformer" />
+          <title>StringToShortIndexerModel - org.apache.spark.ml.feature.StringToShortIndexerModel</title>
+          <meta name="description" content="StringToShortIndexerModel - org.apache.spark.ml.feature.StringToShortIndexerModel" />
+          <meta name="keywords" content="StringToShortIndexerModel org.apache.spark.ml.feature.StringToShortIndexerModel" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
-            var hash = 'org.apache.spark.ml.feature.S2CellTransformer';
+            var hash = 'org.apache.spark.ml.feature.StringToShortIndexerModel';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -30,10 +30,10 @@
       <div id="definition">
         <img alt="Class" src="../../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.feature">feature</a></p>
-        <h1>S2CellTransformer</h1><h3><span class="morelinks"><div>Related Doc:
+        <h1>StringToShortIndexerModel</h1><h3><span class="morelinks"><div>Related Doc:
             <a href="package.html" class="extype" name="org.apache.spark.ml.feature">package feature</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -45,14 +45,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></span>
+        <span class="name">StringToShortIndexerModel</span><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>] with <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexerBase" class="extype" target="_top">StringIndexerBase</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Transform latitude and longitude into S2 Cell id
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexerBase" class="extype" target="_top">StringIndexerBase</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -70,7 +69,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="org.apache.spark.ml.feature.S2CellTransformer"><span>S2CellTransformer</span></li><li class="in" name="org.apache.spark.ml.Transformer"><span>Transformer</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="org.apache.spark.ml.feature.StringToShortIndexerModel"><span>StringToShortIndexerModel</span></li><li class="in" name="org.apache.spark.ml.feature.StringIndexerBase"><span>StringIndexerBase</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasOutputCol"><span>HasOutputCol</span></li><li class="in" name="org.apache.spark.ml.param.shared.HasInputCol"><span>HasInputCol</span></li><li class="in" name="org.apache.spark.ml.Model"><span>Model</span></li><li class="in" name="org.apache.spark.ml.Transformer"><span>Transformer</span></li><li class="in" name="org.apache.spark.ml.PipelineStage"><span>PipelineStage</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.ml.param.Params"><span>Params</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.apache.spark.ml.util.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,36 +88,36 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.apache.spark.ml.feature.S2CellTransformer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="&lt;init&gt;:S2CellTransformer"></a>
+              <ol><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(labels:Array[String]):org.apache.spark.ml.feature.StringToShortIndexerModel"></a>
+      <a id="&lt;init&gt;:StringToShortIndexerModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="params">()</span>
+        <span class="name">StringToShortIndexerModel</span><span class="params">(<span name="labels">labels: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@&lt;init&gt;():org.apache.spark.ml.feature.S2CellTransformer" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@&lt;init&gt;(labels:Array[String]):org.apache.spark.ml.feature.StringToShortIndexerModel" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="&lt;init&gt;:S2CellTransformer"></a>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(uid:String,labels:Array[String]):org.apache.spark.ml.feature.StringToShortIndexerModel"></a>
+      <a id="&lt;init&gt;:StringToShortIndexerModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">S2CellTransformer</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">StringToShortIndexerModel</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="labels">labels: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@&lt;init&gt;(uid:String):org.apache.spark.ml.feature.S2CellTransformer" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@&lt;init&gt;(uid:String,labels:Array[String]):org.apache.spark.ml.feature.StringToShortIndexerModel" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -144,7 +143,7 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -161,7 +160,7 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@##():Int" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@##():Int" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -178,7 +177,7 @@
         <span class="name">$</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@$[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@$[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -195,7 +194,7 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -212,41 +211,24 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#cellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cellCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="cellCol:Param[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cellCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@cellCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="org.apache.spark.ml.param.Params#clear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type"></a>
-      <a id="clear(Param[_]):S2CellTransformer.this.type"></a>
+      <a id="clear(Param[_]):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -263,7 +245,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@clone():Object" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -274,23 +256,23 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.S2CellTransformer"></a>
-      <a id="copy(ParamMap):S2CellTransformer"></a>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.StringToShortIndexerModel"></a>
+      <a id="copy(ParamMap):StringToShortIndexerModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a></span>
+        <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.S2CellTransformer" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.feature.StringToShortIndexerModel" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Transformer → PipelineStage → Params</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a> → Model → Transformer → PipelineStage → Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#copyValues" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T"></a>
       <a id="copyValues[T&lt;:Params](T,ParamMap):T"></a>
@@ -303,7 +285,7 @@
         <span class="name">copyValues</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="to">to: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>, <span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -320,7 +302,7 @@
         <span class="name">defaultCopy</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.defaultCopy.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -337,7 +319,7 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -354,7 +336,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -371,7 +353,7 @@
         <span class="name">explainParam</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@explainParam(param:org.apache.spark.ml.param.Param[_]):String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@explainParam(param:org.apache.spark.ml.param.Param[_]):String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -388,7 +370,7 @@
         <span class="name">explainParams</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@explainParams():String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@explainParams():String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -405,7 +387,7 @@
         <span class="name">extractParamMap</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@extractParamMap():org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@extractParamMap():org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -422,7 +404,7 @@
         <span class="name">extractParamMap</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -439,7 +421,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -462,28 +444,11 @@
         <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getCellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getCellCol:String"></a>
-      <a id="getCellCol:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCellCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getCellCol:String" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -496,7 +461,7 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -513,62 +478,28 @@
         <span class="name">getDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLatCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLatCol:String"></a>
-      <a id="getLatCol:String"></a>
+    </li><li name="org.apache.spark.ml.param.shared.HasInputCol#getInputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInputCol:String"></a>
+      <a id="getInputCol:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getLatCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">getInputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getLatCol:String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getInputCol:String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLevel:Int"></a>
-      <a id="getLevel:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLevel</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getLevel:Int" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#getLonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLonCol:String"></a>
-      <a id="getLonCol:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLonCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getLonCol:String" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getOrDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
       <a id="getOrDefault[T](Param[T]):T"></a>
@@ -581,11 +512,28 @@
         <span class="name">getOrDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#getOutputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutputCol:String"></a>
+      <a id="getOutputCol:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutputCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getOutputCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getParam(paramName:String):org.apache.spark.ml.param.Param[Any]"></a>
       <a id="getParam(String):Param[Any]"></a>
@@ -598,7 +546,7 @@
         <span class="name">getParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@getParam(paramName:String):org.apache.spark.ml.param.Param[Any]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@getParam(paramName:String):org.apache.spark.ml.param.Param[Any]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -615,7 +563,7 @@
         <span class="name">hasDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.hasDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -632,11 +580,28 @@
         <span class="name">hasParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@hasParam(paramName:String):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@hasParam(paramName:String):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Model#hasParent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasParent:Boolean"></a>
+      <a id="hasParent:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasParent</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@hasParent:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -649,11 +614,28 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasInputCol#inputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputCol:org.apache.spark.ml.param.Param[String]"></a>
+      <a id="inputCol:Param[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@inputCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasInputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isDefined" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
       <a id="isDefined(Param[_]):Boolean"></a>
@@ -666,7 +648,7 @@
         <span class="name">isDefined</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -683,7 +665,7 @@
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -700,7 +682,7 @@
         <span class="name">isSet</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@isSet(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@isSet(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -717,41 +699,24 @@
         <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@isTraceEnabled():Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@isTraceEnabled():Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#latCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="latCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="latCol:Param[String]"></a>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#labels" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="labels:Array[String]"></a>
+      <a id="labels:Array[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">latCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">labels</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@latCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#level" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="level:org.apache.spark.ml.param.Param[Int]"></a>
-      <a id="level:Param[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">level</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@level:org.apache.spark.ml.param.Param[Int]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@labels:Array[String]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -768,7 +733,7 @@
         <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@log:org.slf4j.Logger" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@log:org.slf4j.Logger" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -785,7 +750,7 @@
         <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -802,7 +767,7 @@
         <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logDebug(msg:=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logDebug(msg:=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -819,7 +784,7 @@
         <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -836,7 +801,7 @@
         <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logError(msg:=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logError(msg:=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -853,7 +818,7 @@
         <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -870,7 +835,7 @@
         <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logInfo(msg:=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logInfo(msg:=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -887,7 +852,7 @@
         <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logName:String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logName:String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -904,7 +869,7 @@
         <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -921,7 +886,7 @@
         <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logTrace(msg:=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logTrace(msg:=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -938,7 +903,7 @@
         <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -955,28 +920,11 @@
         <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@logWarning(msg:=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@logWarning(msg:=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#lonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lonCol:org.apache.spark.ml.param.Param[String]"></a>
-      <a id="lonCol:Param[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lonCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@lonCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -989,7 +937,7 @@
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1006,7 +954,7 @@
         <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1023,11 +971,28 @@
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.ml.param.shared.HasOutputCol#outputCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputCol:org.apache.spark.ml.param.Param[String]"></a>
+      <a id="outputCol:Param[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@outputCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasOutputCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#params" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="params:Array[org.apache.spark.ml.param.Param[_]]"></a>
       <a id="params:Array[Param[_]]"></a>
@@ -1040,164 +1005,164 @@
         <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@params:Array[org.apache.spark.ml.param.Param[_]]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@params:Array[org.apache.spark.ml.param.Param[_]]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
+    </li><li name="org.apache.spark.ml.Model#parent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parent:org.apache.spark.ml.Estimator[M]"></a>
+      <a id="parent:Estimator[StringToShortIndexerModel]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parent</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@parent:org.apache.spark.ml.Estimator[M]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type"></a>
-      <a id="set(ParamPair[_]):S2CellTransformer.this.type"></a>
+      <a id="set(ParamPair[_]):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(param:String,value:Any):Params.this.type"></a>
-      <a id="set(String,Any):S2CellTransformer.this.type"></a>
+      <a id="set(String,Any):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@set(param:String,value:Any):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@set(param:String,value:Any):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="set[T](Param[T],T):S2CellTransformer.this.type"></a>
+      <a id="set[T](Param[T],T):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setCellCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setCellCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setCellCol(String):S2CellTransformer.this.type"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setCellCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setCellCol(value:String):S2CellTransformer.this.type" title="Permalink" target="_top">
-        <img src="../../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type"></a>
-      <a id="setDefault(ParamPair[_]*):S2CellTransformer.this.type"></a>
+      <a id="setDefault(ParamPair[_]*):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
-      <a id="setDefault[T](Param[T],T):S2CellTransformer.this.type"></a>
+      <a id="setDefault[T](Param[T],T):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLatCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLatCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setLatCol(String):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#setInputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setInputCol(value:String):StringToShortIndexerModel.this.type"></a>
+      <a id="setInputCol(String):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLatCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setInputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setLatCol(value:String):S2CellTransformer.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@setInputCol(value:String):StringToShortIndexerModel.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLevel(value:Int):S2CellTransformer.this.type"></a>
-      <a id="setLevel(Int):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#setOutputCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setOutputCol(value:String):StringToShortIndexerModel.this.type"></a>
+      <a id="setOutputCol(String):StringToShortIndexerModel.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLevel</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setOutputCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>.this.type</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setLevel(value:Int):S2CellTransformer.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@setOutputCol(value:String):StringToShortIndexerModel.this.type" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#setLonCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLonCol(value:String):S2CellTransformer.this.type"></a>
-      <a id="setLonCol(String):S2CellTransformer.this.type"></a>
+    </li><li name="org.apache.spark.ml.Model#setParent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setParent(parent:org.apache.spark.ml.Estimator[M]):M"></a>
+      <a id="setParent(Estimator[StringToShortIndexerModel]):StringToShortIndexerModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLonCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a>.this.type</span>
+        <span class="name">setParent</span><span class="params">(<span name="parent">parent: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@setLonCol(value:String):S2CellTransformer.this.type" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@setParent(parent:org.apache.spark.ml.Estimator[M]):M" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Model</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -1210,7 +1175,7 @@
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1227,12 +1192,12 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@toString():String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@toString():String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Identifiable → AnyRef → Any</dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.sql.DataFrame"></a>
       <a id="transform(DataFrame):DataFrame"></a>
       <h4 class="signature">
@@ -1244,11 +1209,11 @@
         <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@transform(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@transform(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Transformer</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a> → Transformer</dd></dl></div>
     </li><li name="org.apache.spark.ml.Transformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):org.apache.spark.sql.DataFrame"></a>
       <a id="transform(DataFrame,ParamMap):DataFrame"></a>
@@ -1261,7 +1226,7 @@
         <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMap">paramMap: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@transform(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@transform(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1278,7 +1243,7 @@
         <span class="name">transform</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="firstParamPair">firstParamPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>, <span name="otherParamPairs">otherParamPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@transform(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@transform(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1286,7 +1251,7 @@
                 <span class="name">@varargs</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType):StructType"></a>
       <h4 class="signature">
@@ -1298,11 +1263,11 @@
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → PipelineStage</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a> → PipelineStage</dd></dl></div>
     </li><li name="org.apache.spark.ml.PipelineStage#transformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType"></a>
       <a id="transformSchema(StructType,Boolean):StructType"></a>
@@ -1315,7 +1280,7 @@
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="logging">logging: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1323,7 +1288,7 @@
                 <span class="name">@DeveloperApi</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.apache.spark.ml.feature.S2CellTransformer#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="uid:String"></a>
       <a id="uid:String"></a>
       <h4 class="signature">
@@ -1335,11 +1300,28 @@
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@uid:String" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@uid:String" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.S2CellTransformer">S2CellTransformer</a> → Identifiable</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a> → Identifiable</dd></dl></div>
+    </li><li name="org.apache.spark.ml.feature.StringIndexerBase#validateAndTransformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="validateAndTransformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
+      <a id="validateAndTransformSchema(StructType):StructType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validateAndTransformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@validateAndTransformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>StringIndexerBase</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#validateParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateParams():Unit"></a>
       <a id="validateParams():Unit"></a>
@@ -1352,7 +1334,7 @@
         <span class="name">validateParams</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@validateParams():Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@validateParams():Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1369,7 +1351,7 @@
         <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1392,7 +1374,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1415,7 +1397,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#org.apache.spark.ml.feature.S2CellTransformer@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.StringToShortIndexerModel@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1435,7 +1417,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.apache.spark.ml.Transformer">
+        <div class="parent" name="org.apache.spark.ml.feature.StringIndexerBase">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexerBase" class="extype" target="_top">StringIndexerBase</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasOutputCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasOutputCol" class="extype" target="_top">HasOutputCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.param.shared.HasInputCol">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasInputCol" class="extype" target="_top">HasInputCol</a></h3>
+            </div><div class="parent" name="org.apache.spark.ml.Model">
+              <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>]</h3>
+            </div><div class="parent" name="org.apache.spark.ml.Transformer">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></h3>
             </div><div class="parent" name="org.apache.spark.ml.PipelineStage">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a></h3>

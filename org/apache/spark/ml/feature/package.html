@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>feature - org.apache.spark.ml.feature</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -24,9 +28,13 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../../lib/package_big.png" />
+        <img alt="Package" src="../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a></p>
-        <h1>feature</h1>
+        <h1>feature</h1><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -41,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -67,7 +75,6 @@
               <li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li>
             </ol>
-            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -92,12 +99,16 @@
       <span class="symbol">
         <a href="Binning.html"><span class="name">Binning</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>] with <span class="extype" name="org.apache.spark.ml.feature.BinningBase">BinningBase</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Based on <span class="extype" name="org.apache.spark.ml.feature.Bucketizer">Bucketizer</span>, except that
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@BinningextendsModel[org.apache.spark.ml.feature.Binning]withBinningBase" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Based on <span class="extype" name="org.apache.spark.ml.feature.Bucketizer">Bucketizer</span>, except that
 instead of <span class="extype" name="org.apache.spark.ml.attribute.NominalAttribute">NominalAttribute</span> it
 outputs <span class="extype" name="org.apache.spark.ml.attribute.AttributeGroup">AttributeGroup</span> column
 </p>
-    </li><li name="org.apache.spark.ml.feature.Gather" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.apache.spark.ml.feature.Gather" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="GatherextendsTransformerwithGatherParams"></a>
       <a id="Gather:Gather"></a>
       <h4 class="signature">
@@ -108,9 +119,21 @@ outputs <span class="extype" name="org.apache.spark.ml.attribute.AttributeGroup"
       <span class="symbol">
         <a href="Gather.html"><span class="name">Gather</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a> with <span class="extype" name="org.apache.spark.ml.feature.GatherParams">GatherParams</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Inspired by R <code>tidyr</code> and <code>reshape2</code> packages.</p>
-    </li><li name="org.apache.spark.ml.feature.GatherEncoder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@GatherextendsTransformerwithGatherParams" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Inspired by R <code>tidyr</code> and <code>reshape2</code> packages.</p><div class="fullcomment"><div class="comment cmt"><p>Inspired by R <code>tidyr</code> and <code>reshape2</code> packages. Convert long <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a> with values
+for each key into wide <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a>, applying aggregation function if single
+key has multiple values</p><pre>cookie_id | site_id | impressions
+----------|---------|--------------
+ cookieAA |   <span class="num">123</span>   | <span class="num">10</span>
+ cookieAA |   <span class="num">123</span>   | <span class="num">5</span>
+ cookieAA |   <span class="num">456</span>   | <span class="num">20</span></pre><p>gathered using <code>sum</code> agregate</p><pre>cookie_id | output_col
+----------|------------------------
+cookieAA  | [{ site_id: <span class="num">123</span>, impressions: <span class="num">15.0</span> }, { site_id: <span class="num">456</span>, impressions: <span class="num">20.0</span> }]</pre></div></div>
+    </li><li name="org.apache.spark.ml.feature.GatherEncoder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="GatherEncoderextendsEstimator[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams"></a>
       <a id="GatherEncoder:GatherEncoder"></a>
       <h4 class="signature">
@@ -121,10 +144,26 @@ outputs <span class="extype" name="org.apache.spark.ml.attribute.AttributeGroup"
       <span class="symbol">
         <a href="GatherEncoder.html"><span class="name">GatherEncoder</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="GatherEncoderModel.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>] with <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Encode categorical values collected by <a href="Gather.html" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> transformation as feature vector using
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@GatherEncoderextendsEstimator[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Encode categorical values collected by <a href="Gather.html" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> transformation as feature vector using
 dummy variables inside <span class="extype" name="org.apache.spark.ml.attribute.AttributeGroup">AttributeGroup</span>
-with attached metadata</p>
+with attached metadata</p><div class="fullcomment"><div class="comment cmt"><p>Encode categorical values collected by <a href="Gather.html" class="extype" name="org.apache.spark.ml.feature.Gather">Gather</a> transformation as feature vector using
+dummy variables inside <span class="extype" name="org.apache.spark.ml.attribute.AttributeGroup">AttributeGroup</span>
+with attached metadata</p><pre>cookie_id | sites
+----------|------------------------------------------------------------------------
+cookieAA  | [{ site_id: <span class="num">1</span>, impressions: <span class="num">15.0</span> }, { site_id: <span class="num">2</span>, impressions: <span class="num">20.0</span> }]
+cookieBB  | [{ site_id: <span class="num">2</span>, impressions: <span class="num">7.0</span> }, { site_id: <span class="num">3</span>, impressions: <span class="num">5.0</span> }]</pre><p>transformed into</p><pre>cookie_id | site_features
+----------|------------------------
+cookieAA  | [ <span class="num">15.0</span> , <span class="num">20.0</span> , <span class="num">0</span>   ]
+cookieBB  | [ <span class="num">0.0</span>  ,  <span class="num">7.0</span> , <span class="num">5.0</span> ]</pre><p>Optionally apply dimensionality reduction using top transformation:</p><ul><li>Top coverage, is selecting categorical values by computing the count of distinct users for each value,
+   sorting the values in descending order by the count of users, and choosing the top values from the resulting
+   list such that the sum of the distinct user counts over these values covers c percent of all users,
+   for example, selecting top geographic locations covering 99% of users.
+</li></ul></div></div>
     </li><li name="org.apache.spark.ml.feature.GatherEncoderModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GatherEncoderModelextendsModel[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams"></a>
       <a id="GatherEncoderModel:GatherEncoderModel"></a>
@@ -136,8 +175,12 @@ with attached metadata</p>
       <span class="symbol">
         <a href="GatherEncoderModel.html"><span class="name">GatherEncoderModel</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="GatherEncoderModel.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoderModel">GatherEncoderModel</a>] with <span class="extype" name="org.apache.spark.ml.feature.GatherEncoderParams">GatherEncoderParams</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Model fitted by <a href="GatherEncoder.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoder">GatherEncoder</a>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@GatherEncoderModelextendsModel[org.apache.spark.ml.feature.GatherEncoderModel]withGatherEncoderParams" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Model fitted by <a href="GatherEncoder.html" class="extype" name="org.apache.spark.ml.feature.GatherEncoder">GatherEncoder</a>
 </p>
     </li><li name="org.apache.spark.ml.feature.OptimalBinning" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="OptimalBinningextendsEstimator[org.apache.spark.ml.feature.Binning]withBinningBasewithSplitOptimizer"></a>
@@ -150,7 +193,11 @@ with attached metadata</p>
       <span class="symbol">
         <a href="OptimalBinning.html"><span class="name">OptimalBinning</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="Binning.html" class="extype" name="org.apache.spark.ml.feature.Binning">Binning</a>] with <span class="extype" name="org.apache.spark.ml.feature.BinningBase">BinningBase</span> with <a href="SplitOptimizer.html" class="extype" name="org.apache.spark.ml.feature.SplitOptimizer">SplitOptimizer</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@OptimalBinningextendsEstimator[org.apache.spark.ml.feature.Binning]withBinningBasewithSplitOptimizer" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.feature.S2CellTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S2CellTransformerextendsTransformer"></a>
@@ -163,8 +210,12 @@ with attached metadata</p>
       <span class="symbol">
         <a href="S2CellTransformer.html"><span class="name">S2CellTransformer</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Transformer" class="extype" target="_top">Transformer</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Transform latitude and longitude into S2 Cell id
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@S2CellTransformerextendsTransformer" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transform latitude and longitude into S2 Cell id
 </p>
     </li><li name="org.apache.spark.ml.feature.SplitOptimizer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SplitOptimizerextendsAnyRef"></a>
@@ -175,11 +226,53 @@ with attached metadata</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="SplitOptimizer.html"><span class="name">SplitOptimizer</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <a href="SplitOptimizer.html"><span class="name">SplitOptimizer</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Compute optimal split to have the same number of points in each bucket/bin
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@SplitOptimizerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Compute optimal split to have the same number of points in each bucket/bin
 </p>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StringToShortIndexerextendsEstimator[org.apache.spark.ml.feature.StringToShortIndexerModel]withStringIndexerBase"></a>
+      <a id="StringToShortIndexer:StringToShortIndexer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringToShortIndexer.html"><span class="name">StringToShortIndexer</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="StringToShortIndexerModel.html" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>] with <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexerBase" class="extype" target="_top">StringIndexerBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@StringToShortIndexerextendsEstimator[org.apache.spark.ml.feature.StringToShortIndexerModel]withStringIndexerBase" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A label indexer that maps a string column of labels to an ML column of label indices.</p><div class="fullcomment"><div class="comment cmt"><p>A label indexer that maps a string column of labels to an ML column of label indices.
+If the input column is numeric, we cast it to string and index the string values.
+The indices are in [0, numLabels), ordered by label frequencies.
+So the most frequent label gets index 0.</p><p>In contrast to Spark <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexer" class="extype" target="_top">StringIndexer</a> use Short for labels (instead of Double)
+</p></div></div>
+    </li><li name="org.apache.spark.ml.feature.StringToShortIndexerModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringToShortIndexerModelextendsModel[org.apache.spark.ml.feature.StringToShortIndexerModel]withStringIndexerBase"></a>
+      <a id="StringToShortIndexerModel:StringToShortIndexerModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringToShortIndexerModel.html"><span class="name">StringToShortIndexerModel</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Model" class="extype" target="_top">Model</a>[<a href="StringToShortIndexerModel.html" class="extype" name="org.apache.spark.ml.feature.StringToShortIndexerModel">StringToShortIndexerModel</a>] with <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.feature.StringIndexerBase" class="extype" target="_top">StringIndexerBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.feature.package@StringToShortIndexerModelextendsModel[org.apache.spark.ml.feature.StringToShortIndexerModel]withStringIndexerBase" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 
@@ -194,9 +287,9 @@ with attached metadata</p>
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -213,6 +306,7 @@ with attached metadata</p>
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

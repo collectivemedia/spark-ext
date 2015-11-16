@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>expressions - org.apache.spark.sql.catalyst.expressions</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -24,9 +28,13 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../../../lib/package_big.png" />
+        <img alt="Package" src="../../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="org">org</a>.<a href="../../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../package.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../package.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></p>
-        <h1>expressions</h1>
+        <h1>expressions</h1><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -41,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -67,7 +75,6 @@
               <li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li>
             </ol>
-            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -90,9 +97,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CollectArray.html"><span class="name">CollectArray</span></a><span class="params">(<span name="expression">expression: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PartialAggregate1">PartialAggregate1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CollectArray.html"><span class="name">CollectArray</span></a><span class="params">(<span name="expression">expression: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PartialAggregate1">PartialAggregate1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CollectArrayextendsExpressionwithPartialAggregate1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.sql.catalyst.expressions.CollectArrayFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CollectArrayFunctionextendsAggregateFunction1withProductwithSerializable"></a>
@@ -103,9 +114,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CollectArrayFunction.html"><span class="name">CollectArrayFunction</span></a><span class="params">(<span name="expr">expr: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CollectArrayFunction.html"><span class="name">CollectArrayFunction</span></a><span class="params">(<span name="expr">expr: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CollectArrayFunctionextendsAggregateFunction1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.sql.catalyst.expressions.CollectPartialArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CollectPartialArrayextendsExpressionwithAggregateExpression1withProductwithSerializable"></a>
@@ -116,9 +131,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CollectPartialArray.html"><span class="name">CollectPartialArray</span></a><span class="params">(<span name="expression">expression: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CollectPartialArray.html"><span class="name">CollectPartialArray</span></a><span class="params">(<span name="expression">expression: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CollectPartialArrayextendsExpressionwithAggregateExpression1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.sql.catalyst.expressions.CollectPartialArrayFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CollectPartialArrayFunctionextendsAggregateFunction1withProductwithSerializable"></a>
@@ -129,9 +148,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CollectPartialArrayFunction.html"><span class="name">CollectPartialArrayFunction</span></a><span class="params">(<span name="expr">expr: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CollectPartialArrayFunction.html"><span class="name">CollectPartialArrayFunction</span></a><span class="params">(<span name="expr">expr: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CollectPartialArrayFunctionextendsAggregateFunction1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.sql.catalyst.expressions.CombinePartialArrays" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CombinePartialArraysextendsExpressionwithAggregateExpression1withProductwithSerializable"></a>
@@ -142,9 +165,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CombinePartialArrays.html"><span class="name">CombinePartialArrays</span></a><span class="params">(<span name="inputSet">inputSet: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CombinePartialArrays.html"><span class="name">CombinePartialArrays</span></a><span class="params">(<span name="inputSet">inputSet: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CombinePartialArraysextendsExpressionwithAggregateExpression1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.sql.catalyst.expressions.CombinePartialArraysFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CombinePartialArraysFunctionextendsAggregateFunction1withProductwithSerializable"></a>
@@ -155,9 +182,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CombinePartialArraysFunction.html"><span class="name">CombinePartialArraysFunction</span></a><span class="params">(<span name="inputSet">inputSet: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="CombinePartialArraysFunction.html"><span class="name">CombinePartialArraysFunction</span></a><span class="params">(<span name="inputSet">inputSet: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="base">base: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateExpression1">AggregateExpression1</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.AggregateFunction1">AggregateFunction1</span> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@CombinePartialArraysFunctionextendsAggregateFunction1withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -166,7 +197,7 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="org.apache.spark.sql.catalyst.expressions.package#EmptyRow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.apache.spark.sql.catalyst.expressions#EmptyRow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="EmptyRow:org.apache.spark.sql.catalyst.InternalRow"></a>
       <a id="EmptyRow:InternalRow"></a>
       <h4 class="signature">
@@ -177,7 +208,11 @@
       <span class="symbol">
         <span class="name">EmptyRow</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.spark.sql.catalyst.expressions.package@EmptyRow:org.apache.spark.sql.catalyst.InternalRow" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -189,9 +224,9 @@
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -208,6 +243,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

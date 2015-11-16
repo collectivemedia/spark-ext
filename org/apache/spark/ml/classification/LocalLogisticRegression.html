@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>LocalLogisticRegression - org.apache.spark.ml.classification.LocalLogisticRegression</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
@@ -24,9 +28,15 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../../lib/class_big.png" />
+        <img alt="Class" src="../../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.ml">ml</a>.<a href="package.html" class="extype" name="org.apache.spark.ml.classification">classification</a></p>
-        <h1>LocalLogisticRegression</h1>
+        <h1>LocalLogisticRegression</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="org.apache.spark.ml.classification">package classification</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -45,7 +55,7 @@ to build model using RDD, it can be built on single node. Essentially using Spar
 as distributed Executor
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionParams" class="extype" target="_top">LogisticRegressionParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasThreshold" class="extype" target="_top">HasThreshold</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasStandardization" class="extype" target="_top">HasStandardization</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasTol" class="extype" target="_top">HasTol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasFitIntercept" class="extype" target="_top">HasFitIntercept</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasMaxIter" class="extype" target="_top">HasMaxIter</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasElasticNetParam" class="extype" target="_top">HasElasticNetParam</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasRegParam" class="extype" target="_top">HasRegParam</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ProbabilisticClassifier" class="extype" target="_top">ProbabilisticClassifier</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ProbabilisticClassifierParams" class="extype" target="_top">ProbabilisticClassifierParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasThresholds" class="extype" target="_top">HasThresholds</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasProbabilityCol" class="extype" target="_top">HasProbabilityCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.Classifier" class="extype" target="_top">Classifier</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ClassifierParams" class="extype" target="_top">ClassifierParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasRawPredictionCol" class="extype" target="_top">HasRawPredictionCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Predictor" class="extype" target="_top">Predictor</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PredictorParams" class="extype" target="_top">PredictorParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasPredictionCol" class="extype" target="_top">HasPredictionCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasFeaturesCol" class="extype" target="_top">HasFeaturesCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasLabelCol" class="extype" target="_top">HasLabelCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionParams" class="extype" target="_top">LogisticRegressionParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasThreshold" class="extype" target="_top">HasThreshold</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasStandardization" class="extype" target="_top">HasStandardization</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasTol" class="extype" target="_top">HasTol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasFitIntercept" class="extype" target="_top">HasFitIntercept</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasMaxIter" class="extype" target="_top">HasMaxIter</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasElasticNetParam" class="extype" target="_top">HasElasticNetParam</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasRegParam" class="extype" target="_top">HasRegParam</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ProbabilisticClassifier" class="extype" target="_top">ProbabilisticClassifier</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ProbabilisticClassifierParams" class="extype" target="_top">ProbabilisticClassifierParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasThresholds" class="extype" target="_top">HasThresholds</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasProbabilityCol" class="extype" target="_top">HasProbabilityCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.Classifier" class="extype" target="_top">Classifier</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.ClassifierParams" class="extype" target="_top">ClassifierParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasRawPredictionCol" class="extype" target="_top">HasRawPredictionCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Predictor" class="extype" target="_top">Predictor</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.linalg.Vector" class="extype" target="_top">Vector</a>, <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PredictorParams" class="extype" target="_top">PredictorParams</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasPredictionCol" class="extype" target="_top">HasPredictionCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasFeaturesCol" class="extype" target="_top">HasFeaturesCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.shared.HasLabelCol" class="extype" target="_top">HasLabelCol</a>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.Estimator" class="extype" target="_top">Estimator</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>], <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.PipelineStage" class="extype" target="_top">PipelineStage</a>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -71,7 +81,6 @@ as distributed Executor
               <li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li>
             </ol>
-            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -94,7 +103,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">LocalLogisticRegression</span><span class="params">()</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@&lt;init&gt;():org.apache.spark.ml.classification.LocalLogisticRegression" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;(uid:String):org.apache.spark.ml.classification.LocalLogisticRegression"></a>
@@ -107,7 +120,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">LocalLogisticRegression</span><span class="params">(<span name="uid">uid: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@&lt;init&gt;(uid:String):org.apache.spark.ml.classification.LocalLogisticRegression" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -119,19 +136,6 @@ as distributed Executor
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -140,10 +144,14 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -153,9 +161,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#$" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="$[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
@@ -168,22 +180,13 @@ as distributed Executor
       <span class="symbol">
         <span class="name">$</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.$.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@$[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -192,10 +195,14 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -207,7 +214,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LogisticRegressionParams#checkThresholdConsistency" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="checkThresholdConsistency():Unit"></a>
@@ -218,9 +229,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">checkThresholdConsistency</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">checkThresholdConsistency</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@checkThresholdConsistency():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LogisticRegressionParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#clear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type"></a>
@@ -233,7 +248,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">clear</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@clear(param:org.apache.spark.ml.param.Param[_]):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -244,9 +263,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -265,7 +288,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">copy</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@copy(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.classification.LocalLogisticRegression" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → Predictor → Estimator → PipelineStage → Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#copyValues" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T"></a>
@@ -278,7 +305,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">copyValues</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="to">to: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>, <span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.copyValues.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@copyValues[T&lt;:org.apache.spark.ml.param.Params](to:T,extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#defaultCopy" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T"></a>
@@ -291,7 +322,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">defaultCopy</span><span class="tparams">[<span name="T">T &lt;: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></span>]</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.defaultCopy.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@defaultCopy[T&lt;:org.apache.spark.ml.param.Params](extra:org.apache.spark.ml.param.ParamMap):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasElasticNetParam#elasticNetParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="elasticNetParam:org.apache.spark.ml.param.DoubleParam"></a>
@@ -304,7 +339,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">elasticNetParam</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.DoubleParam" class="extype" target="_top">DoubleParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@elasticNetParam:org.apache.spark.ml.param.DoubleParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasElasticNetParam</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
@@ -315,9 +354,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -328,9 +371,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#explainParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="explainParam(param:org.apache.spark.ml.param.Param[_]):String"></a>
@@ -343,7 +390,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">explainParam</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@explainParam(param:org.apache.spark.ml.param.Param[_]):String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#explainParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="explainParams():String"></a>
@@ -356,7 +407,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">explainParams</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@explainParams():String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.Predictor#extractLabeledPoints" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extractLabeledPoints(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.rdd.RDD[org.apache.spark.mllib.regression.LabeledPoint]"></a>
@@ -369,7 +424,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">extractLabeledPoints</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.regression.LabeledPoint" class="extype" target="_top">LabeledPoint</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@extractLabeledPoints(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.rdd.RDD[org.apache.spark.mllib.regression.LabeledPoint]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Predictor</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#extractParamMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extractParamMap():org.apache.spark.ml.param.ParamMap"></a>
@@ -382,7 +441,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">extractParamMap</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@extractParamMap():org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#extractParamMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap"></a>
@@ -395,7 +458,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">extractParamMap</span><span class="params">(<span name="extra">extra: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@extractParamMap(extra:org.apache.spark.ml.param.ParamMap):org.apache.spark.ml.param.ParamMap" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasFeaturesCol#featuresCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="featuresCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -408,7 +475,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">featuresCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@featuresCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasFeaturesCol</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -419,9 +490,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -440,7 +515,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@fit(dataset:org.apache.spark.sql.DataFrame):M" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Predictor → Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMaps:Array[org.apache.spark.ml.param.ParamMap]):Seq[M]"></a>
@@ -451,9 +530,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMaps">paramMaps: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>]</span>
+        <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMaps">paramMaps: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@fit(dataset:org.apache.spark.sql.DataFrame,paramMaps:Array[org.apache.spark.ml.param.ParamMap]):Seq[M]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):M"></a>
@@ -466,7 +549,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="paramMap">paramMap: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamMap" class="extype" target="_top">ParamMap</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@fit(dataset:org.apache.spark.sql.DataFrame,paramMap:org.apache.spark.ml.param.ParamMap):M" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd></dl></div>
     </li><li name="org.apache.spark.ml.Estimator#fit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fit(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):M"></a>
@@ -479,7 +566,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">fit</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="firstParamPair">firstParamPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>, <span name="otherParamPairs">otherParamPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@fit(dataset:org.apache.spark.sql.DataFrame,firstParamPair:org.apache.spark.ml.param.ParamPair[_],otherParamPairs:org.apache.spark.ml.param.ParamPair[_]*):M" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Estimator</dd><dt>Annotations</dt><dd>
                 <span class="name">@varargs</span><span class="args">()</span>
               
@@ -495,7 +586,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">fitIntercept</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.BooleanParam" class="extype" target="_top">BooleanParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@fitIntercept:org.apache.spark.ml.param.BooleanParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasFitIntercept</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
@@ -506,9 +601,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>
+        <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.get.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@get[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
@@ -521,7 +620,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]"></a>
@@ -532,9 +635,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>
+        <span class="name">getDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getDefault.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getDefault[T](param:org.apache.spark.ml.param.Param[T]):Option[T]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasElasticNetParam#getElasticNetParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getElasticNetParam:Double"></a>
@@ -545,9 +652,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getElasticNetParam</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+        <span class="name">getElasticNetParam</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getElasticNetParam:Double" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasElasticNetParam</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasFeaturesCol#getFeaturesCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getFeaturesCol:String"></a>
@@ -560,7 +671,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getFeaturesCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getFeaturesCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasFeaturesCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasFitIntercept#getFitIntercept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getFitIntercept:Boolean"></a>
@@ -571,9 +686,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFitIntercept</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">getFitIntercept</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getFitIntercept:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasFitIntercept</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasLabelCol#getLabelCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getLabelCol:String"></a>
@@ -586,7 +705,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getLabelCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getLabelCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasLabelCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasMaxIter#getMaxIter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMaxIter:Int"></a>
@@ -597,9 +720,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMaxIter</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">getMaxIter</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getMaxIter:Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasMaxIter</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getOrDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T"></a>
@@ -612,7 +739,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getOrDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.ml.param.Params.getOrDefault.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getOrDefault[T](param:org.apache.spark.ml.param.Param[T]):T" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#getParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getParam(paramName:String):org.apache.spark.ml.param.Param[Any]"></a>
@@ -623,9 +754,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">getParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getParam(paramName:String):org.apache.spark.ml.param.Param[Any]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasPredictionCol#getPredictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getPredictionCol:String"></a>
@@ -638,7 +773,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getPredictionCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getPredictionCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasPredictionCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasProbabilityCol#getProbabilityCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getProbabilityCol:String"></a>
@@ -651,7 +790,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getProbabilityCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getProbabilityCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasProbabilityCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasRawPredictionCol#getRawPredictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getRawPredictionCol:String"></a>
@@ -664,7 +807,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">getRawPredictionCol</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getRawPredictionCol:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasRawPredictionCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasRegParam#getRegParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getRegParam:Double"></a>
@@ -675,9 +822,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getRegParam</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+        <span class="name">getRegParam</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getRegParam:Double" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasRegParam</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasStandardization#getStandardization" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getStandardization:Boolean"></a>
@@ -688,9 +839,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getStandardization</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">getStandardization</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getStandardization:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasStandardization</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#getThreshold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getThreshold:Double"></a>
@@ -701,9 +856,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getThreshold</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+        <span class="name">getThreshold</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getThreshold:Double" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → LogisticRegressionParams → HasThreshold</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#getThresholds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getThresholds:Array[Double]"></a>
@@ -714,9 +873,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getThresholds</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
+        <span class="name">getThresholds</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getThresholds:Array[Double]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → LogisticRegressionParams → HasThresholds</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasTol#getTol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTol:Double"></a>
@@ -727,9 +890,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getTol</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>
+        <span class="name">getTol</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@getTol:Double" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasTol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#hasDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean"></a>
@@ -740,9 +907,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.hasDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">hasDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.hasDefault.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@hasDefault[T](param:org.apache.spark.ml.param.Param[T]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#hasParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasParam(paramName:String):Boolean"></a>
@@ -753,9 +924,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">hasParam</span><span class="params">(<span name="paramName">paramName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@hasParam(paramName:String):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -766,9 +941,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isDefined" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
@@ -779,9 +958,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isDefined</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isDefined</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@isDefined(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -792,9 +975,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#isSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isSet(param:org.apache.spark.ml.param.Param[_]):Boolean"></a>
@@ -805,9 +992,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isSet</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isSet</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@isSet(param:org.apache.spark.ml.param.Param[_]):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isTraceEnabled():Boolean"></a>
@@ -818,9 +1009,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@isTraceEnabled():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasLabelCol#labelCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="labelCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -833,7 +1028,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">labelCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@labelCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasLabelCol</dd></dl></div>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
@@ -846,7 +1045,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@log:org.slf4j.Logger" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -857,9 +1060,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logDebug(msg:=&gt;String):Unit"></a>
@@ -870,9 +1077,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logDebug(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -883,9 +1094,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logError(msg:=&gt;String):Unit"></a>
@@ -896,9 +1111,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logError(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -909,9 +1128,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logInfo(msg:=&gt;String):Unit"></a>
@@ -922,9 +1145,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logInfo(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logName:String"></a>
@@ -937,7 +1164,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logName:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -948,9 +1179,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logTrace(msg:=&gt;String):Unit"></a>
@@ -961,9 +1196,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logTrace(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
@@ -974,9 +1213,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logWarning(msg:=&gt;String):Unit"></a>
@@ -987,9 +1230,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@logWarning(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasMaxIter#maxIter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="maxIter:org.apache.spark.ml.param.IntParam"></a>
@@ -1002,7 +1249,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">maxIter</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.IntParam" class="extype" target="_top">IntParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@maxIter:org.apache.spark.ml.param.IntParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasMaxIter</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
@@ -1013,9 +1264,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -1026,9 +1281,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -1039,9 +1298,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#params" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="params:Array[org.apache.spark.ml.param.Param[_]]"></a>
@@ -1052,9 +1315,13 @@ as distributed Executor
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]]</span>
+        <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[_]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@params:Array[org.apache.spark.ml.param.Param[_]]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasPredictionCol#predictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="predictionCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -1067,7 +1334,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">predictionCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@predictionCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasPredictionCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasProbabilityCol#probabilityCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="probabilityCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -1080,7 +1351,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">probabilityCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@probabilityCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasProbabilityCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasRawPredictionCol#rawPredictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rawPredictionCol:org.apache.spark.ml.param.Param[String]"></a>
@@ -1093,7 +1368,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">rawPredictionCol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@rawPredictionCol:org.apache.spark.ml.param.Param[String]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasRawPredictionCol</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasRegParam#regParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="regParam:org.apache.spark.ml.param.DoubleParam"></a>
@@ -1106,7 +1385,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">regParam</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.DoubleParam" class="extype" target="_top">DoubleParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@regParam:org.apache.spark.ml.param.DoubleParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasRegParam</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type"></a>
@@ -1119,7 +1402,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">set</span><span class="params">(<span name="paramPair">paramPair: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@set(paramPair:org.apache.spark.ml.param.ParamPair[_]):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set(param:String,value:Any):Params.this.type"></a>
@@ -1130,9 +1417,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">set</span><span class="params">(<span name="param">param: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@set(param:String,value:Any):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#set" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
@@ -1145,7 +1436,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.set.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@set[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type"></a>
@@ -1158,7 +1453,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setDefault</span><span class="params">(<span name="paramPairs">paramPairs: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.ParamPair" class="extype" target="_top">ParamPair</a>[_]*</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setDefault(paramPairs:org.apache.spark.ml.param.ParamPair[_]*):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.Params#setDefault" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type"></a>
@@ -1171,7 +1470,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setDefault</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="param">param: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Param" class="extype" target="_top">Param</a>[<span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span>]</span>, <span name="value">value: <span class="extype" name="org.apache.spark.ml.param.Params.setDefault.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setDefault[T](param:org.apache.spark.ml.param.Param[T],value:T):Params.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Params</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setElasticNetParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setElasticNetParam(value:Double):LocalLogisticRegression.this.type"></a>
@@ -1182,9 +1485,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setElasticNetParam</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setElasticNetParam</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setElasticNetParam(value:Double):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.Predictor#setFeaturesCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setFeaturesCol(value:String):Learner"></a>
@@ -1197,7 +1504,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setFeaturesCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setFeaturesCol(value:String):Learner" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Predictor</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setFitIntercept" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setFitIntercept(value:Boolean):LocalLogisticRegression.this.type"></a>
@@ -1208,9 +1519,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setFitIntercept</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setFitIntercept</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setFitIntercept(value:Boolean):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.Predictor#setLabelCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setLabelCol(value:String):Learner"></a>
@@ -1223,7 +1538,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setLabelCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setLabelCol(value:String):Learner" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Predictor</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setMaxIter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setMaxIter(value:Int):LocalLogisticRegression.this.type"></a>
@@ -1234,9 +1553,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setMaxIter</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setMaxIter</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setMaxIter(value:Int):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.Predictor#setPredictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setPredictionCol(value:&lt;?&gt;):Learner"></a>
@@ -1249,7 +1572,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setPredictionCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setPredictionCol(value:String):Learner" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Predictor</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.ProbabilisticClassifier#setProbabilityCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setProbabilityCol(value:String):E"></a>
@@ -1262,7 +1589,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setProbabilityCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setProbabilityCol(value:String):E" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ProbabilisticClassifier</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.Classifier#setRawPredictionCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setRawPredictionCol(value:&lt;?&gt;):E"></a>
@@ -1275,7 +1606,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">setRawPredictionCol</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setRawPredictionCol(value:String):E" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Classifier</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setRegParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setRegParam(value:Double):LocalLogisticRegression.this.type"></a>
@@ -1286,9 +1621,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setRegParam</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setRegParam</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setRegParam(value:Double):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setStandardization" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setStandardization(value:Boolean):LocalLogisticRegression.this.type"></a>
@@ -1299,9 +1638,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setStandardization</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setStandardization</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setStandardization(value:Boolean):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setThreshold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setThreshold(value:Double):LocalLogisticRegression.this.type"></a>
@@ -1312,9 +1655,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setThreshold</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setThreshold</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setThreshold(value:Double):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → LogisticRegressionParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setThresholds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setThresholds(value:Array[Double]):LocalLogisticRegression.this.type"></a>
@@ -1325,9 +1672,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setThresholds</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setThresholds</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setThresholds(value:Array[Double]):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → LogisticRegressionParams → ProbabilisticClassifier</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#setTol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setTol(value:Double):LocalLogisticRegression.this.type"></a>
@@ -1338,9 +1689,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setTol</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
+        <span class="name">setTol</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a>.this.type</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@setTol(value:Double):LocalLogisticRegression.this.type" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li><li name="org.apache.spark.ml.param.shared.HasStandardization#standardization" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="standardization:org.apache.spark.ml.param.BooleanParam"></a>
@@ -1353,7 +1708,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">standardization</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.BooleanParam" class="extype" target="_top">BooleanParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@standardization:org.apache.spark.ml.param.BooleanParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasStandardization</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
@@ -1366,7 +1725,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasThreshold#threshold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="threshold:org.apache.spark.ml.param.DoubleParam"></a>
@@ -1379,7 +1742,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">threshold</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.DoubleParam" class="extype" target="_top">DoubleParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@threshold:org.apache.spark.ml.param.DoubleParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasThreshold</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasThresholds#thresholds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="thresholds:org.apache.spark.ml.param.DoubleArrayParam"></a>
@@ -1392,7 +1759,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">thresholds</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.DoubleArrayParam" class="extype" target="_top">DoubleArrayParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@thresholds:org.apache.spark.ml.param.DoubleArrayParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasThresholds</dd></dl></div>
     </li><li name="org.apache.spark.ml.util.Identifiable#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -1405,7 +1776,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Identifiable → AnyRef → Any</dd></dl></div>
     </li><li name="org.apache.spark.ml.param.shared.HasTol#tol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tol:org.apache.spark.ml.param.DoubleParam"></a>
@@ -1418,7 +1793,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">tol</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.DoubleParam" class="extype" target="_top">DoubleParam</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@tol:org.apache.spark.ml.param.DoubleParam" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasTol</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LocalLogisticRegression#train" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="train(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.ml.classification.LogisticRegressionModel"></a>
@@ -1431,7 +1810,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">train</span><span class="params">(<span name="dataset">dataset: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.classification.LogisticRegressionModel" class="extype" target="_top">LogisticRegressionModel</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@train(dataset:org.apache.spark.sql.DataFrame):org.apache.spark.ml.classification.LogisticRegressionModel" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → Predictor</dd></dl></div>
     </li><li name="org.apache.spark.ml.Predictor#transformSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType"></a>
@@ -1444,7 +1827,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@transformSchema(schema:org.apache.spark.sql.types.StructType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Predictor → PipelineStage</dd></dl></div>
     </li><li name="org.apache.spark.ml.PipelineStage#transformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType"></a>
@@ -1455,9 +1842,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="logging">logging: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
+        <span class="name">transformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="logging">logging: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@transformSchema(schema:org.apache.spark.sql.types.StructType,logging:Boolean):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>PipelineStage</dd><dt>Annotations</dt><dd>
                 <span class="name">@DeveloperApi</span><span class="args">()</span>
               
@@ -1473,7 +1864,11 @@ as distributed Executor
       <span class="symbol">
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@uid:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.ml.classification.LocalLogisticRegression">LocalLogisticRegression</a> → Identifiable</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.ProbabilisticClassifierParams#validateAndTransformSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateAndTransformSchema(schema:org.apache.spark.sql.types.StructType,fitting:Boolean,featuresDataType:org.apache.spark.sql.types.DataType):org.apache.spark.sql.types.StructType"></a>
@@ -1484,9 +1879,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validateAndTransformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="fitting">fitting: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="featuresDataType">featuresDataType: <span class="extype" name="org.apache.spark.sql.types.DataType">DataType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
+        <span class="name">validateAndTransformSchema</span><span class="params">(<span name="schema">schema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="fitting">fitting: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="featuresDataType">featuresDataType: <span class="extype" name="org.apache.spark.sql.types.DataType">DataType</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@validateAndTransformSchema(schema:org.apache.spark.sql.types.StructType,fitting:Boolean,featuresDataType:org.apache.spark.sql.types.DataType):org.apache.spark.sql.types.StructType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ProbabilisticClassifierParams → ClassifierParams → PredictorParams</dd></dl></div>
     </li><li name="org.apache.spark.ml.classification.LogisticRegressionParams#validateParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="validateParams():Unit"></a>
@@ -1497,9 +1896,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validateParams</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">validateParams</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@validateParams():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LogisticRegressionParams → Params</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -1510,9 +1913,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1529,9 +1936,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1548,9 +1959,13 @@ as distributed Executor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.spark.ml.classification.LocalLogisticRegression@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1616,15 +2031,15 @@ as distributed Executor
             </div><div class="parent" name="org.apache.spark.ml.param.Params">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.param.Params" class="extype" target="_top">Params</a></h3>
             </div><div class="parent" name="scala.Serializable">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="org.apache.spark.ml.util.Identifiable">
               <h3>Inherited from <a href="https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.ml.util.Identifiable" class="extype" target="_top">Identifiable</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -1641,6 +2056,7 @@ as distributed Executor
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+
+
     </body>
       </html>
