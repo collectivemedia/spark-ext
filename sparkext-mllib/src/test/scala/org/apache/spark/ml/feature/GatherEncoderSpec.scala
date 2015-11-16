@@ -106,13 +106,13 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
   it should "get empty key set for empty dataset" in {
     val encoder = baseEncoder
     val features = encoder.fit(emptyDataset)
-    println(features.modelKeys.isEmpty)
+    assert(features.modelKeys.isEmpty)
   }
 
   it should "get empty key set for null dataset" in {
     val encoder = baseEncoder
     val features = encoder.fit(nullDataset)
-    println(features.modelKeys.isEmpty)
+    assert(features.modelKeys.isEmpty)
   }
 
 }
