@@ -225,7 +225,7 @@ class GatherEncoderModel(
 
     if (modelKeys.isEmpty && getFailOnEmptyKeys) {
       throw new IllegalArgumentException(s"Can't encode gathered data with empty model keys. " +
-        s"Check that input column $getInputCol has data.")
+        s"Check that input column '$getInputCol' has data.")
     }
 
     if (modelKeys.isEmpty && !getFailOnEmptyKeys) {
