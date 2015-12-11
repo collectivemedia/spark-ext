@@ -63,7 +63,7 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
     Seq.fill(80)(Row(cookie3, null))
   ), schema)
 
-  val baseEncoder = new GatherEncoder()
+  def baseEncoder = new GatherEncoder()
     .setInputCol("sites")
     .setOutputCol("features")
     .setKeyCol("site")
@@ -75,11 +75,28 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
     assert(features.modelKeys.length == 9)
   }
 
+  it should "support key exclusion when cover is 100.0" in {
+    val encoder = baseEncoder.setCover(100.0).setExcludeKeys(Set("imdb.com"))
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 8)
+    assert(!features.modelKeys.contains("imdb.com"))
+  }
+
   it should "exclude imdb.com for 95% coverage" in {
     val encoder = baseEncoder.setCover(95.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 8)
     assert(!features.modelKeys.contains("imdb.com"))
+  }
+
+  it should "support key exclusion when cover is 95%" in {
+    val encoder = baseEncoder.setCover(95.0).setExcludeKeys(Set("amazon.com"))
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 7)
+    // Imdb excluded by coverage
+    assert(!features.modelKeys.contains("imdb.com"))
+    // Amazon excluded explicitly
+    assert(!features.modelKeys.contains("amazon.com"))
   }
 
   it should "exclude amazon.com for 90% coverage" in {
@@ -114,5 +131,6 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
     val features = encoder.fit(nullDataset)
     assert(features.modelKeys.isEmpty)
   }
+
 
 }

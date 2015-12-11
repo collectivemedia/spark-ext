@@ -29,6 +29,9 @@ private[feature] trait GatherEncoderParams
   val failOnEmptyKeys: Param[Boolean] = new Param[Boolean](this, "failOnEmptyKeys",
     "Fail if gathered key set is empty")
 
+  val excludeKeys: Param[Set[Any]] = new Param[Set[Any]](this, "excludeKeys",
+    "Exclude given keys from encoded model")
+
   def getCover: Double = $(cover)
 
   def getAllOther: Boolean = $(allOther)
@@ -36,6 +39,8 @@ private[feature] trait GatherEncoderParams
   def getKeepInputCol: Boolean = $(keepInputCol)
 
   def getFailOnEmptyKeys: Boolean = ${failOnEmptyKeys}
+
+  def getExcludeKeys: Set[Any] = $(excludeKeys)
 
   protected def validateSchema(schema: StructType): Unit = {
     // Check that inputCol is array of StructType
@@ -117,11 +122,14 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
   def setFailOnEmptyKeys(value: Boolean): this.type = set(failOnEmptyKeys, value)
 
+  def setExcludeKeys(value: Set[Any]): this.type = set(excludeKeys, value)
+
   setDefault(
     cover -> 100.0,
     allOther -> false,
     keepInputCol -> true,
-    failOnEmptyKeys -> true
+    failOnEmptyKeys -> true,
+    excludeKeys -> Set.empty[Any]
   )
 
   override def fit(dataset: DataFrame): GatherEncoderModel = {
@@ -142,6 +150,7 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
       val keyCol = s"${uid}_key"
       dataset.select(explode(col(s"$inputColName.$keyColName")) as keyCol)
         .groupBy(keyCol).agg(col(keyCol)).collect().map(_.get(0))
+        .filter(k => !getExcludeKeys.contains(k))
     } else {
 
       val keyCol = s"${uid}_key"
@@ -154,7 +163,9 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
       log.debug(s"Collected ${keys.length} unique keys")
 
-      val topKeys = keys.sortBy(_._2)(implicitly[Ordering[Long]].reverse)
+      val topKeys = keys.sortBy(_._2)(implicitly[Ordering[Long]].reverse) filter {
+        case (k, _) => !getExcludeKeys.contains(k)
+      }
 
       // Get number of columns below cover threshold
       val threshold = ($(cover) / 100) * topKeys.map(_._2).sum
