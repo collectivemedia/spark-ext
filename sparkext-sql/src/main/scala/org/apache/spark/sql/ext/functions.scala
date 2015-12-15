@@ -1,7 +1,9 @@
 package org.apache.spark.sql.ext
 
-import org.apache.spark.sql.catalyst.expressions._
-import org.apache.spark.sql._
+import org.apache.spark.sql.Column
+import org.apache.spark.sql.catalyst.expressions.aggregate._
+import org.apache.spark.sql.catalyst.expressions.Expression
+
 
 import scala.language.implicitConversions
 
@@ -9,9 +11,22 @@ import scala.language.implicitConversions
 object functions {
   // scalastyle:on
 
-  private[this] implicit def toColumn(expr: Expression): Column = Column(expr)
+  private def withExpr(expr: Expression): Column = Column(expr)
 
-  // TODO: Workaround for https://issues.apache.org/jira/browse/SPARK-9301
-  def collectArray(expr: Column): Column = CollectArray(expr.expr)
+  private def withAggregateFunction(
+    func: AggregateFunction,
+    isDistinct: Boolean = false): Column = {
+    Column(func.toAggregateExpression(isDistinct))
+  }
+
+  def collectArray(e: Expression): Column = withAggregateFunction {
+    CollectArray(e)
+  }
+
+  def collectArray(c: Column): Column = collectArray(c.expr)
+
+  def concatArrays(cols: Column*): Column = withExpr { ConcatArrays(cols.map(_.expr)) }
+
+  def appendToArray(base: Column, child: Column): Column = withExpr { AppendToArray(base.expr, child.expr) }
 
 }

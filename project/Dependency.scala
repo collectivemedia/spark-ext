@@ -5,7 +5,7 @@ object Dependency {
 
   object V {
 
-    val Spark              = "1.5.2"
+    val Spark              = "v1.6.0-rc1"
     val S2Geometry         = "1.0"
 
     val ScalaTest          = "2.2.4"
