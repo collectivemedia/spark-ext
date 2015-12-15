@@ -2,7 +2,7 @@ import VersionScheme.Keys._
 
 isRelease in ThisBuild := sys.props("release") == "true"
 
-versionPrefix in ThisBuild := "0.0.21"
+versionPrefix in ThisBuild := "0.0.22"
 
 version in ThisBuild <<= Def.setting[String] {
   if (isRelease.value) {

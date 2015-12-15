@@ -302,7 +302,7 @@ class GatherEncoderModel(
     val metadata = outputSchema($(outputCol)).metadata
 
     val encodedCol = encoder(
-      dataset(s"$inputColName.$keyColName").cast(ArrayType(StringType)),
+      dataset(s"$inputColName.$keyColName"),
       dataset(s"$inputColName.$valueColName").cast(ArrayType(DoubleType))
     ).as(outputColName, metadata)
 

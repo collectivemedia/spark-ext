@@ -1,6 +1,5 @@
 package org.apache.spark.ml.feature
 
-import breeze.linalg.DenseVector
 import com.collective.TestSparkContext
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.sql.types._
@@ -13,6 +12,7 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     StructField("cookie_id", StringType),
     StructField("sites", ArrayType(StructType(Seq(
       StructField("site", StringType),
+      StructField("site_id", IntegerType),
       StructField("impressions", LongType
     ))), containsNull = true))
   ))
@@ -23,18 +23,25 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
   val cookie4 = "cookie4"
   val cookie5 = "cookie5"
 
+  val (google, googleId) = "google.com" -> 1
+  val (cnn, cnnId) = "cnn.com" -> 2
+  val (bbc, bbcId) = "bbc.com" -> 3
+  val (auto, autoId) = "auto.com" -> 4
+  val (moto, motoId) = "moto.com" -> 5
+  val (sport, sportId) = "sport.com" -> 6
+
   val dataset = sqlContext.createDataFrame(sc.parallelize(Seq(
     Row(cookie1, Array(
-      Row("google.com", 12L),
-      Row("cnn.com", 14L)
+      Row(google, googleId, 12L),
+      Row(cnn, cnnId, 14L)
     )),
     Row(cookie2, Array(
-      Row("bbc.com", 20L),
-      Row("auto.com", 1L),
-      Row("moto.com", 3L)
+      Row(bbc, bbcId, 20L),
+      Row(auto, autoId, 1L),
+      Row(moto, motoId, 3L)
     )),
     Row(cookie3, Array(
-      Row("sport.com", 100L)
+      Row(sport, sportId, 100L)
     )),
     Row(cookie4, Array.empty[Row]),
     Row(cookie5, null)
@@ -47,7 +54,8 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
     .setKeyCol("site")
     .setValueCol("impressions")
 
-  val baseEncoder = createEncoder(Array("google.com", "bbc.com", "cnn.com"))
+  val sites: Array[Any] = Array(google, bbc, cnn)
+  val siteIds: Array[Any] = Array(googleId, bbcId, cnnId)
 
   def toFeatures(encoder: GatherEncoderModel, dataset: DataFrame): Map[String, Vector] = {
     val encodedDf = encoder.transform(dataset).select("cookie_id", "features")
@@ -57,21 +65,26 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
   }
 
   "Gather Encoder Model" should "encode categories ignoring all other" in {
-    val encoder = baseEncoder.setAllOther(false)
-    val features = toFeatures(encoder, dataset)
+    val sitesEncoder = createEncoder(sites).setAllOther(false)
+    val siteIdsEncoder = createEncoder(siteIds).setKeyCol("site_id").setAllOther(false)
 
-    assert(features(cookie1).size == 3)
-    assert(features(cookie1).toSparse.indices.toSeq == 0 :: 2 :: Nil)
-    assert(features(cookie1).toSparse.values.toSeq == 12 :: 14 :: Nil)
+    // Check that type of the keys doesn't matter
+    val siteFeatures = toFeatures(sitesEncoder, dataset)
+    val idFeatures = toFeatures(siteIdsEncoder, dataset)
+    assert(siteFeatures == idFeatures)
 
-    assert(features(cookie2).size == 3)
-    assert(features(cookie2).toSparse.indices.toSeq == 1 :: Nil)
-    assert(features(cookie2).toSparse.values.toSeq == 20 :: Nil)
+    assert(siteFeatures(cookie1).size == 3)
+    assert(siteFeatures(cookie1).toSparse.indices.toSeq == 0 :: 2 :: Nil)
+    assert(siteFeatures(cookie1).toSparse.values.toSeq == 12 :: 14 :: Nil)
+
+    assert(siteFeatures(cookie2).size == 3)
+    assert(siteFeatures(cookie2).toSparse.indices.toSeq == 1 :: Nil)
+    assert(siteFeatures(cookie2).toSparse.values.toSeq == 20 :: Nil)
 
     def assertEmptyFeatures(cookie: String): Unit = {
-      assert(features(cookie).size == 3)
-      assert(features(cookie).toSparse.indices.toSeq == Nil)
-      assert(features(cookie).toSparse.values.toSeq == Nil)
+      assert(siteFeatures(cookie).size == 3)
+      assert(siteFeatures(cookie).toSparse.indices.toSeq == Nil)
+      assert(siteFeatures(cookie).toSparse.values.toSeq == Nil)
     }
 
     assertEmptyFeatures(cookie3)
@@ -80,8 +93,8 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
   }
 
   it should "encode categories with all other" in {
-    val encoder = baseEncoder.setAllOther(true)
-    val features = toFeatures(encoder, dataset)
+    val sitesEncoder = createEncoder(sites).setAllOther(true)
+    val features = toFeatures(sitesEncoder, dataset)
 
     assert(features(cookie1).size == 4)
     assert(features(cookie1).toSparse.indices.toSeq == 0 :: 2 :: Nil)
@@ -106,8 +119,8 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
   }
 
   it should "remove input col" in {
-    val encoder = baseEncoder.setKeepInputCol(false)
-    val encoded = encoder.transform(dataset)
+    val sitesEncoder = createEncoder(sites).setKeepInputCol(false)
+    val encoded = sitesEncoder.transform(dataset)
     assert(encoded.schema.size == dataset.schema.size)
     assert(!encoded.schema.exists(_.name == "sites"))
   }
@@ -120,19 +133,19 @@ class GatherEncoderModelSpec extends FlatSpec with TestSparkContext {
   }
 
   it should "output empty vectors for empty keys with all other disabled" in {
-    val encoder = createEncoder(Array.empty)
+    val sitesEncoder = createEncoder(Array.empty)
       .setFailOnEmptyKeys(false)
       .setAllOther(false)
-    val features = toFeatures(encoder, dataset)
+    val features = toFeatures(sitesEncoder, dataset)
     assert(features(cookie1).size == 0)
   }
 
   it should "put all values into all other column for empty keys" in {
-    val encoder = createEncoder(Array.empty)
+    val sitesEncoder = createEncoder(Array.empty)
       .setFailOnEmptyKeys(false)
       .setAllOther(true)
 
-    val features = toFeatures(encoder, dataset)
+    val features = toFeatures(sitesEncoder, dataset)
 
     assert(features(cookie1).toArray.toSeq == Seq(26.0))
     assert(features(cookie2).toArray.toSeq == Seq(24.0))
