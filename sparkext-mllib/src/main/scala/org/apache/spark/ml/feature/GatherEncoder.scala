@@ -16,9 +16,17 @@ import scala.collection.mutable
 private[feature] trait GatherEncoderParams
   extends Params with HasInputCol with HasOutputCol with HasKeyCol with HasValueCol {
 
+  val transformation: Param[String] = new Param[String](this, "transformation",
+    "Transformation type: [top, index]",
+    ParamValidators.inArray(Array("top", "index")))
+
+  val support: Param[Double] = new Param[Double](this, "support",
+    "Minimum support",
+    ParamValidators.inRange(0.0, 100.0))
+
   val cover: Param[Double] = new Param[Double](this, "cover",
     "Top coverage",
-    (v: Double) => ParamValidators.gt(0.0)(v) && ParamValidators.ltEq(100.0)(v))
+    ParamValidators.inRange(0.0, 100.0))
 
   val allOther: Param[Boolean] = new Param[Boolean](this, "allOther",
     "Add all other column")
@@ -101,6 +109,8 @@ private[feature] trait GatherEncoderParams
  *    sorting the values in descending order by the count of users, and choosing the top values from the resulting
  *    list such that the sum of the distinct user counts over these values covers c percent of all users,
  *    for example, selecting top geographic locations covering 99% of users.
+ *  - Minimum Support, is selecting categorical values such that at least c percent of users have this value,
+ *    for example, web sites that account for at least c percent of traffic.
  */
 class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderModel] with GatherEncoderParams {
 
@@ -114,6 +124,10 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
 
   def setValueCol(value: String): this.type = set(valueCol, value)
 
+  def setTransformation(value: String): this.type = set(transformation, value)
+
+  def setSupport(value: Double): this.type = set(support, value)
+
   def setCover(value: Double): this.type = set(cover, value)
 
   def setAllOther(value: Boolean): this.type = set(allOther, value)
@@ -125,6 +139,8 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
   def setExcludeKeys(value: Set[Any]): this.type = set(excludeKeys, value)
 
   setDefault(
+    transformation -> "top",
+    support -> 0.1,
     cover -> 100.0,
     allOther -> false,
     keepInputCol -> true,
@@ -132,20 +148,16 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
     excludeKeys -> Set.empty[Any]
   )
 
-  override def fit(dataset: DataFrame): GatherEncoderModel = {
-    validateSchema(dataset.schema)
-
+  private def computeTopKeys(dataset: DataFrame): Array[Any] = {
     val inputColName = $(inputCol)
     val keyColName = $(keyCol)
-    val valueColName = $(valueCol)
+    val coverVal = $(cover)
 
-    log.info(s"Fit gather encoder for input column: $inputColName. " +
+    log.info(s"Compute top transformation." +
       s"Key column: $keyColName " +
-      s"Value column: $valueColName" +
-      s"Cover: ${$(cover)}. " +
-      s"All other: ${$(allOther)}.")
+      s"Cover: $coverVal")
 
-    val gatherKeys: Array[Any] = if ($(cover) == 100.0) {
+    if (coverVal == 100.0) {
       // With cover 100% it's required to collect all keys
       val keyCol = s"${uid}_key"
       dataset.select(explode(col(s"$inputColName.$keyColName")) as keyCol)
@@ -153,15 +165,15 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
         .filter(k => !getExcludeKeys.contains(k))
     } else {
 
-      val keyCol = s"${uid}_key"
-      val grouped: DataFrame = dataset.select(explode(col(s"$inputColName.$keyColName")) as keyCol).groupBy(keyCol).count()
+      val key = s"${uid}_key"
+      val grouped: DataFrame = dataset.select(explode(col(s"$inputColName.$keyColName")) as key).groupBy(key).count()
       val keys: Array[(Any, Long)] = grouped.collect().map { row =>
         val key = row.get(0)
         val cnt = row.getLong(1)
         (key, cnt)
       }
 
-      log.debug(s"Collected ${keys.length} unique keys")
+      log.debug(s"Collected ${keys.length} top keys for key column: $keyColName")
 
       val topKeys = keys.sortBy(_._2)(implicitly[Ordering[Long]].reverse) filter {
         case (k, _) => !getExcludeKeys.contains(k)
@@ -172,6 +184,61 @@ class GatherEncoder(override val uid: String) extends Estimator[GatherEncoderMod
       val keysBelowThreshold = topKeys.map(_._2).scanLeft(0L)((cum, cnt) => cum + cnt).takeWhile(_ < threshold).length
 
       topKeys.take(keysBelowThreshold).map(_._1)
+    }
+  }
+
+  private def computeIndexKeys(dataset: DataFrame): Array[Any] = {
+    val inputColName = $(inputCol)
+    val keyColName = $(keyCol)
+    val supportVal = $(support)
+
+    log.info(s"Compute index transformation." +
+      s"Key column: $keyColName " +
+      s"Support: $supportVal")
+
+    val key = s"${uid}_key"
+    val grouped: DataFrame = dataset.select(explode(col(s"$inputColName.$keyColName")) as key).groupBy(key).count()
+
+    // Get support threshold
+    val totalCount = grouped.select(sum("count")).first().getLong(0)
+    val threshold = (supportVal / 100) * totalCount
+
+    val aboveThresholdKeys: Array[(Any, Long)] =
+      grouped.filter(col("count") >= threshold).collect().map { row =>
+        val key = row.get(0)
+        val cnt = row.getLong(1)
+        (key, cnt)
+      }
+
+    log.debug(s"Collected '${aboveThresholdKeys.length}' support keys " +
+      s"above threshold: $threshold for key column: $keyColName")
+
+    val supportKeys = aboveThresholdKeys.sortBy(_._2)(implicitly[Ordering[Long]].reverse) filter {
+      case (k, _) => !getExcludeKeys.contains(k)
+    }
+
+    supportKeys.map(_._1)
+  }
+
+  override def fit(dataset: DataFrame): GatherEncoderModel = {
+    validateSchema(dataset.schema)
+
+    val transformationVal = $(transformation)
+    val inputColName = $(inputCol)
+    val keyColName = $(keyCol)
+    val valueColName = $(valueCol)
+
+    log.info(s"Fit gather encoder for input column: $inputColName. " +
+      s"Key column: $keyColName " +
+      s"Value column: $valueColName " +
+      s"Transformation: $transformationVal " +
+      s"All other: ${$(allOther)}.")
+
+    val gatherKeys: Array[Any] = transformationVal match {
+      case "top" => computeTopKeys(dataset)
+      case "index" => computeIndexKeys(dataset)
+      case unknown =>
+        throw new IllegalArgumentException(s"Invalid gather transformation type: $unknown")
     }
 
     copyValues(new GatherEncoderModel(uid, gatherKeys).setParent(this))
@@ -212,6 +279,10 @@ class GatherEncoderModel(
   def setKeyCol(value: String): this.type = set(keyCol, value)
 
   def setValueCol(value: String): this.type = set(valueCol, value)
+
+  def setTransformation(value: String): this.type = set(transformation, value)
+
+  def setSupport(value: Double): this.type = set(support, value)
 
   def setCover(value: Double): this.type = set(cover, value)
 
