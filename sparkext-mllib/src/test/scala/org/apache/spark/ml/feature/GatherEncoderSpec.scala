@@ -63,34 +63,66 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
     Seq.fill(80)(Row(cookie3, null))
   ), schema)
 
-  def baseEncoder = new GatherEncoder()
+  def topEncoder: GatherEncoder = new GatherEncoder()
     .setInputCol("sites")
     .setOutputCol("features")
     .setKeyCol("site")
     .setValueCol("impressions")
+    .setTransformation("top")
 
-  "Gather Encoder" should "collect all keys when cover is 100.0" in {
-    val encoder = baseEncoder.setCover(100.0)
+  def indexEncoder: GatherEncoder = topEncoder
+    .setTransformation("index")
+
+  "Index Gather Encoder" should "collect all keys when support is 1%" in {
+    val encoder = indexEncoder.setSupport(1.0)
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 9)
+  }
+
+  it should "support key exclusion when support is 1%" in {
+    val encoder = indexEncoder.setSupport(1.0).setExcludeKeys(Set("imdb.com"))
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 8)
+    assert(!features.modelKeys.contains("imdb.com"))
+  }
+
+  it should "exclude imdb.com for 3.1% support" in {
+    val encoder = indexEncoder.setSupport(3.1)
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 8)
+    assert(!features.modelKeys.contains("imdb.com"))
+  }
+
+  it should "exclude imdb.com and amazon.com for 4.1% support" in {
+    val encoder = indexEncoder.setSupport(4.1)
+    val features = encoder.fit(dataset)
+    assert(features.modelKeys.length == 7)
+    assert(!features.modelKeys.contains("imdb.com"))
+    assert(!features.modelKeys.contains("amazon.com"))
+  }
+
+  "Top Gather Encoder" should "collect all keys when cover is 100.0" in {
+    val encoder = topEncoder.setCover(100.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 9)
   }
 
   it should "support key exclusion when cover is 100.0" in {
-    val encoder = baseEncoder.setCover(100.0).setExcludeKeys(Set("imdb.com"))
+    val encoder = topEncoder.setCover(100.0).setExcludeKeys(Set("imdb.com"))
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 8)
     assert(!features.modelKeys.contains("imdb.com"))
   }
 
   it should "exclude imdb.com for 95% coverage" in {
-    val encoder = baseEncoder.setCover(95.0)
+    val encoder = topEncoder.setCover(95.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 8)
     assert(!features.modelKeys.contains("imdb.com"))
   }
 
   it should "support key exclusion when cover is 95%" in {
-    val encoder = baseEncoder.setCover(95.0).setExcludeKeys(Set("amazon.com"))
+    val encoder = topEncoder.setCover(95.0).setExcludeKeys(Set("amazon.com"))
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 7)
     // Imdb excluded by coverage
@@ -100,34 +132,34 @@ class GatherEncoderSpec extends FlatSpec with TestSparkContext {
   }
 
   it should "exclude amazon.com for 90% coverage" in {
-    val encoder = baseEncoder.setCover(90.0)
+    val encoder = topEncoder.setCover(90.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 7)
     assert(!features.modelKeys.contains("amazon.com"))
   }
 
   it should "exclude netflix.com for 85% coverage" in {
-    val encoder = baseEncoder.setCover(85.0)
+    val encoder = topEncoder.setCover(85.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 6)
     assert(!features.modelKeys.contains("netflix.com"))
   }
 
   it should "exclude sport.com for 75% coverage" in {
-    val encoder = baseEncoder.setCover(75.0)
+    val encoder = topEncoder.setCover(75.0)
     val features = encoder.fit(dataset)
     assert(features.modelKeys.length == 5)
     assert(!features.modelKeys.contains("sport.com"))
   }
 
   it should "get empty key set for empty dataset" in {
-    val encoder = baseEncoder
+    val encoder = topEncoder
     val features = encoder.fit(emptyDataset)
     assert(features.modelKeys.isEmpty)
   }
 
   it should "get empty key set for null dataset" in {
-    val encoder = baseEncoder
+    val encoder = topEncoder
     val features = encoder.fit(nullDataset)
     assert(features.modelKeys.isEmpty)
   }
